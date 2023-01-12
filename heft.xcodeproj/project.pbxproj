@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		4E93D0582970CB3400349128 /* heftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0572970CB3400349128 /* heftApp.swift */; };
-		4E93D05A2970CB3400349128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0592970CB3400349128 /* ContentView.swift */; };
+		4E93D05A2970CB3400349128 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0592970CB3400349128 /* PeopleView.swift */; };
 		4E93D05C2970CB3500349128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E93D05B2970CB3500349128 /* Assets.xcassets */; };
 		4E93D05F2970CB3500349128 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E93D05E2970CB3500349128 /* Preview Assets.xcassets */; };
 		4E93D0682970CB8D00349128 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0672970CB8D00349128 /* AddPersonView.swift */; };
 		4E93D06A2970CBE300349128 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0692970CBE300349128 /* Model.swift */; };
+		4E93D06E2970D2F000349128 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06D2970D2F000349128 /* TodayView.swift */; };
+		4E93D0702970D44A00349128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06F2970D44A00349128 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E93D0542970CB3400349128 /* heft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E93D0572970CB3400349128 /* heftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heftApp.swift; sourceTree = "<group>"; };
-		4E93D0592970CB3400349128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4E93D0592970CB3400349128 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		4E93D05B2970CB3500349128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E93D05E2970CB3500349128 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E93D0672970CB8D00349128 /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
 		4E93D0692970CBE300349128 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4E93D06D2970D2F000349128 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		4E93D06F2970D44A00349128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				4E93D0572970CB3400349128 /* heftApp.swift */,
+				4E93D06F2970D44A00349128 /* ContentView.swift */,
 				4E93D06B2970CC1E00349128 /* Views */,
 				4E93D06C2970CC2600349128 /* Model */,
 				4E93D05B2970CB3500349128 /* Assets.xcassets */,
@@ -75,7 +80,8 @@
 		4E93D06B2970CC1E00349128 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4E93D0592970CB3400349128 /* ContentView.swift */,
+				4E93D06D2970D2F000349128 /* TodayView.swift */,
+				4E93D0592970CB3400349128 /* PeopleView.swift */,
 				4E93D0672970CB8D00349128 /* AddPersonView.swift */,
 			);
 			path = Views;
@@ -159,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E93D05A2970CB3400349128 /* ContentView.swift in Sources */,
+				4E93D05A2970CB3400349128 /* PeopleView.swift in Sources */,
+				4E93D06E2970D2F000349128 /* TodayView.swift in Sources */,
+				4E93D0702970D44A00349128 /* ContentView.swift in Sources */,
 				4E93D0582970CB3400349128 /* heftApp.swift in Sources */,
 				4E93D0682970CB8D00349128 /* AddPersonView.swift in Sources */,
 				4E93D06A2970CBE300349128 /* Model.swift in Sources */,
