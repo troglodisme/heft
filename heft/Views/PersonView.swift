@@ -35,7 +35,7 @@ struct BirthdayText: View{
 }
 
 struct PersonView: View {
-    var body: some View {
+    var body: some View {        
         
         VStack {
             HStack{

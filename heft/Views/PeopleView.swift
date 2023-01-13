@@ -19,27 +19,51 @@ struct PeopleView: View {
     ]
     
     @State private var isSheetShowing = false
-
+    
     var body: some View {
         
         NavigationStack {
             
             List {
+                
                 ForEach(people, id: \.id) { person in
-                    
                     
                     HStack{
                         
-                        Image(systemName: "person")
+                        Image("person2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 65, height: 70)
+                            .clipped()
+                            .clipShape(Circle())
+                            .padding(.trailing, 15)
                         
-                        Text(person.name)
-                        
-                        Spacer()
-                        
-                        //Can we format all dates without having to use this long method?
-                        Text(person.birthDate.formatted(.dateTime.day().month().year()) )
-
+                        VStack(alignment: .leading) {
+                            
+                            Text(person.name)
+                                .font(.title2)
+                                .bold()
+                            
+                            //To do: Simplify date formatting
+                            //To do: Change formatting depending on country locale
+                            //To do: Calculate real
+                            Text(person.birthDate.formatted(.dateTime.day().month().year()) )
+                            
+                        }
                     }
+                    
+                    
+                    //                    HStack{
+                    //
+                    //                        Image(systemName: "person")
+                    //                        Text(person.name)
+                    //                        Spacer()
+                    //
+                    //                        //Can we format all dates without having to use this long method?
+                    //                        Text(person.birthDate.formatted(.dateTime.day().month().year()) )
+                    //
+                    //                    }
+                    
                 }
             }
             .navigationBarTitle("People")

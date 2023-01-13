@@ -12,7 +12,7 @@ struct AddPersonView: View {
     @Environment(\.dismiss) var dismiss
     
     @Binding var people: [Person]
-
+    
     @State private var birthday = Date()
     @State private var name: String = ""
 
@@ -22,9 +22,7 @@ struct AddPersonView: View {
             
             VStack {
                 
-                //Name
-
-            
+                //Name            
                 VStack(alignment: .leading) {
                     
                     Text("Name").font(.title)
@@ -69,6 +67,7 @@ struct AddPersonView: View {
                             print("done tapped!")
                             dismiss()
 
+                            //move presentation logic to view model
                             let newPerson = Person(name: name, birthDate: birthday)
                             people.append(newPerson)
                         }
