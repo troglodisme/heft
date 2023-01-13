@@ -7,19 +7,12 @@
 
 import SwiftUI
 
-struct Person {
-    let id = UUID()
-    var name: String
-    var birthDate: Date
-        
-//    var photo: String
-//    var daysRemaining: Int
-}
+
 
 
 struct PeopleView: View {
     
-    //This should be moved out of here
+    //This should be moved in the model or observable object?
     @State private var people: [Person] = [Person(name: "John Doe", birthDate: Date.now),
                                            Person(name: "Jane Smith", birthDate: Date.now),
                                            Person(name: "Bob Johnson", birthDate: Date.now)
@@ -33,6 +26,7 @@ struct PeopleView: View {
             
             List {
                 ForEach(people, id: \.id) { person in
+                    
                     
                     HStack{
                         
