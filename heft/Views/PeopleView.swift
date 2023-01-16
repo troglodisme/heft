@@ -8,28 +8,24 @@
 import SwiftUI
 
 
-
-
 struct PeopleView: View {
     
-    //This should be moved in the model or observable object?
-    @State private var people: [Person] = [Person(name: "John Doe", birthDate: Date.now),
-                                           Person(name: "Jane Smith", birthDate: Date.now),
-                                           Person(name: "Bob Johnson", birthDate: Date.now)
-    ]
-    
+//    @ObservedObject var peopleModel: PeopleObservableObject
+
+    @EnvironmentObject var peopleModel: PeopleObservableObject
+
     @State private var isSheetShowing = false
-    
+
     var body: some View {
         
         NavigationStack {
             
             List {
                 
-                ForEach(people, id: \.id) { person in
+                ForEach(peopleModel.people, id: \.id) { person in
                     
                     HStack{
-                        
+                                                
                         Image("person2")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -43,27 +39,11 @@ struct PeopleView: View {
                             Text(person.name)
                                 .font(.title2)
                                 .bold()
-                            
-                            //To do: Simplify date formatting
-                            //To do: Change formatting depending on country locale
-                            //To do: Calculate real
+                                                        
                             Text(person.birthDate.formatted(.dateTime.day().month().year()) )
-                            
+
                         }
                     }
-                    
-                    
-                    //                    HStack{
-                    //
-                    //                        Image(systemName: "person")
-                    //                        Text(person.name)
-                    //                        Spacer()
-                    //
-                    //                        //Can we format all dates without having to use this long method?
-                    //                        Text(person.birthDate.formatted(.dateTime.day().month().year()) )
-                    //
-                    //                    }
-                    
                 }
             }
             .navigationBarTitle("People")
@@ -76,7 +56,9 @@ struct PeopleView: View {
                         Image(systemName: "plus")
                     }
                     .sheet(isPresented: $isSheetShowing) {
-                        AddPersonView(people: $people)
+                        
+                        AddPersonView()
+                        
                     }
                 }
             }
@@ -89,6 +71,7 @@ struct PeopleView: View {
 struct PeopleView_Previews: PreviewProvider {
     static var previews: some View {
         PeopleView()
+            .environmentObject(PeopleObservableObject())
     }
 }
 

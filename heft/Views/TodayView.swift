@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct TodayView: View {
+    
+    @StateObject private var peopleModel = PeopleObservableObject()
+
     var body: some View {
         
         NavigationStack {
             
             VStack {
                 
+                //This rectangle could be simplified
                 ZStack {
                     Rectangle()
                         .foregroundColor(Color(.white))
@@ -49,6 +53,8 @@ struct TodayView: View {
                     
                 }
                 
+                //This should be filtered by date
+//                PeopleView(peopleModel: PeopleObservableObject())
                 
                 
             }

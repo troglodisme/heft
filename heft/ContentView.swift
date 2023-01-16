@@ -17,6 +17,7 @@ struct ContentView: View {
                 }
             
             PeopleView()
+//            PeopleView(peopleModel: PeopleObservableObject())
                 .tabItem{
                     Image(systemName: "person.fill")
                 }
