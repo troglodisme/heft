@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodayView: View {
     
-    @StateObject private var peopleModel = PeopleObservableObject()
+    @StateObject private var peopleModel = PeopleViewModel()
 
     var body: some View {
         

@@ -12,7 +12,7 @@ struct heftApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(PeopleObservableObject())
+                .environmentObject(PeopleViewModel())
         }
     }
 }

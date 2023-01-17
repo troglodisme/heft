@@ -13,7 +13,7 @@ struct AddPersonView: View {
     
 //    @Binding var people: [Person]
     
-    @EnvironmentObject var peopleModel: PeopleObservableObject
+    @EnvironmentObject var peopleModel: PeopleViewModel
 
     @State private var birthday = Date()
     @State private var name: String = ""

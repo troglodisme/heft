@@ -11,8 +11,7 @@ import SwiftUI
 struct PeopleView: View {
     
 //    @ObservedObject var peopleModel: PeopleObservableObject
-
-    @EnvironmentObject var peopleModel: PeopleObservableObject
+    @EnvironmentObject var peopleModel: PeopleViewModel
 
     @State private var isSheetShowing = false
 
@@ -77,7 +76,7 @@ struct PeopleView: View {
 struct PeopleView_Previews: PreviewProvider {
     static var previews: some View {
         PeopleView()
-            .environmentObject(PeopleObservableObject())
+            .environmentObject(PeopleViewModel())
     }
 }
 
