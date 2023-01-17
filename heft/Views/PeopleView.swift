@@ -40,9 +40,15 @@ struct PeopleView: View {
                                 .font(.title2)
                                 .bold()
                                                         
-                            Text(person.birthDate.formatted(.dateTime.day().month().year()) )
-
-                        }
+                            // Text(person.birthDate.formatted(.dateTime.day().month().year()) )
+                            
+                            Text("\(person.age + 1) years old on \(person.birthDate.formatted(.dateTime.day().month()))")
+                            }
+                        Spacer()
+                        
+                        Text("\(person.countdownDays)")
+                            .backgroundStyle(.red)
+                            .foregroundColor(.red)
                     }
                 }
             }
