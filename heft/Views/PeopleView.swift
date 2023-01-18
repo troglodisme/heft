@@ -10,67 +10,74 @@ import SwiftUI
 
 struct PeopleView: View {
     
-//    @ObservedObject var peopleModel: PeopleObservableObject
+    //    @ObservedObject var peopleModel: PeopleObservableObject
     @EnvironmentObject var peopleModel: PeopleViewModel
-
+    
     @State private var isSheetShowing = false
-
+    
     var body: some View {
-        
         NavigationStack {
-            
-            List {
-                
-                ForEach(peopleModel.people, id: \.id) { person in
-                    
-                    HStack{
-                                                
-                        Image("person2")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 65, height: 70)
-                            .clipped()
-                            .clipShape(Circle())
-                            .padding(.trailing, 15)
-                        
-                        VStack(alignment: .leading) {
-                            
-                            Text(person.name)
-                                .font(.title2)
+            ZStack {
+                    Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+                    VStack {
+                        HStack{
+                            Text("People")
+                                .font(.title)
                                 .bold()
-                                                        
-                            // Text(person.birthDate.formatted(.dateTime.day().month().year()) )
-                            
-                            Text("\(person.age + 1) years old on \(person.birthDate.formatted(.dateTime.day().month()))")
+                                .foregroundColor(.black)
+                            Spacer()
+                            Button(action: {
+                                isSheetShowing.toggle()
+                            }){
+                                Image(systemName: "plus.circle")
+                                    .font(.system(size: 35))
+                                    .foregroundColor(Color("ButtonColor"))
+                            }.sheet(isPresented: $isSheetShowing){
+                                AddPersonView()
                             }
+                        }
+                        .padding(.leading, 30)
+                        .padding(.trailing, 30)
                         Spacer()
-                        
-                        Text("\(person.countdownDays)")
-                            .backgroundStyle(.red)
-                            .foregroundColor(.red)
+                        List {
+                            ForEach(peopleModel.people, id: \.id) { person in
+                                ZStack {
+                                    Section {
+                                        HStack{
+                                            Image("person2")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 65, height: 70)
+                                                .clipped()
+                                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                                                .padding(.trailing, 15)
+                                            VStack(spacing: 5){
+                                                NameText(text: person.name)
+                                                BirthdayText(date: person.birthDate)
+                                            }
+                                        }
+                                        .frame(width: 334.0, height: 85.0)
+                                        .overlay(RoundedRectangle(cornerRadius: 15).stroke(lineWidth: 2.0))
+                                        .foregroundColor(Color.black)
+                                        .background(RoundedRectangle(cornerRadius: 15).fill(.white))
+                                    }
+                                }
+                                .listRowBackground(Color("BackgroundColor"))
+                                .listRowSeparator(.hidden)
+                            }.onDelete(perform: delete)
+                        }
+                        .listStyle(.plain)
+                        .scrollContentBackground(.hidden)
                     }
-                }
-            }
-            .navigationBarTitle("People")
-            .toolbar {
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        isSheetShowing.toggle()
-                    }) {
-                        Image(systemName: "plus")
-                    }
-                    .sheet(isPresented: $isSheetShowing) {
-                        
-                        AddPersonView()
-                        
-                    }
-                }
             }
         }
-    }
+        }
+        
+        func delete(at offsets: IndexSet) {
+            peopleModel.people.remove(atOffsets: offsets)
+        }
+    
 }
-
 
 
 struct PeopleView_Previews: PreviewProvider {

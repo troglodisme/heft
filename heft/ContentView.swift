@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        TabView() {
+        TabView {
             TodayView()
                 .tabItem{
                     Image(systemName: "house.fill")
@@ -22,7 +21,6 @@ struct ContentView: View {
                     Image(systemName: "person.fill")
                 }
         }
-        
     }
 }
 

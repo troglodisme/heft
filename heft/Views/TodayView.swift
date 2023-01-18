@@ -10,59 +10,49 @@ import SwiftUI
 struct TodayView: View {
     
     @StateObject private var peopleModel = PeopleViewModel()
-
+    
     var body: some View {
-        
         NavigationStack {
-            
-            VStack {
-                
-                //This rectangle could be simplified
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(Color(.white))
-                        .frame(height: 250)
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                        .contrast(9.0)
-                        .shadow(radius: 10)
-                    
+            ZStack {
+                Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+                VStack {
+                    Text("Today's Birthday")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.center)
                     VStack{
-                        HStack{
-                            Spacer()
-                            Image("person")
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                            Spacer()
-                        }
-                        
-                        Text ("It’s Helen's 27th birthday! ")
-                            .fontWeight(.semibold)
-                            .padding([.leading, .bottom], 20.0)
-                                                
-                        Button {
-                            print("Send message")
-                        } label: {
-                            Text ("Send message!")
+                            HStack{
+                                Spacer()
+                                Image("person")
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                                Spacer()
+                            }
+                            Text ("It’s Helen's 27th birthday!")
+                                .fontWeight(.semibold)
+                                .padding([.leading, .bottom], 20.0)
+                            
+                            Button(action:{}) {
+                                Text("Generate AI Text")
+                            }
+                            .padding(.horizontal, 50)
+                            .padding(.vertical, 15)
+                            .background(Color("ButtonColor"))
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                         }
                         .padding()
-                        .background(Color(.gray))
-                        .foregroundColor(.white)
-                        .clipShape(Capsule())
-                    }
-                    
+                        .frame(maxWidth: 300)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .transition(.scale)
+                    .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(.black), lineWidth: 2, antialiased: true))
                 }
-                
-                //This should be filtered by date
-//                PeopleView(peopleModel: PeopleObservableObject())
-                
-                
+                    //This should be filtered by date
+                    //                PeopleView(peopleModel: PeopleObservableObject())
             }
-            .navigationTitle("Today")
-            
-            
         }
-        
     }
 }
 
