@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+
 struct TodayView: View {
     
     @StateObject private var peopleModel = PeopleViewModel()
+    @State var settingsIsPresented: Bool = false
 
     var body: some View {
         
@@ -39,11 +41,12 @@ struct TodayView: View {
                         Text ("It’s Helen's 27th birthday! ")
                             .fontWeight(.semibold)
                             .padding([.leading, .bottom], 20.0)
-                                                
+                        
                         Button {
-                            print("Send message")
+                            print("Send Wishes")
                         } label: {
-                            Text ("Send message!")
+                            Text ("Send Wishes!")
+                                .fontWeight(.bold)
                         }
                         .padding()
                         .background(Color(.gray))
@@ -54,20 +57,34 @@ struct TodayView: View {
                 }
                 
                 //This should be filtered by date
-//                PeopleView(peopleModel: PeopleObservableObject())
+                //                PeopleView(peopleModel: PeopleObservableObject())
                 
                 
             }
             .navigationTitle("Today")
+            .toolbar {
+                
+                ToolbarItem(placement:
+                        .navigationBarTrailing) {
+                            Button { settingsIsPresented.toggle() }
+                        label: {
+                            Image(systemName: "gear") }
+                        }
+            }
+            .sheet(isPresented: $settingsIsPresented, content: { Text("")
+                SettingView()
+            })
+    }
+        .accentColor(.black)
+                    }
+                    
+                }
+         
             
             
-        }
-        
-    }
-}
-
-struct TodayView_Previews: PreviewProvider {
-    static var previews: some View {
-        TodayView()
-    }
-}
+            struct TodayView_Previews: PreviewProvider {
+                static var previews: some View {
+                    TodayView()
+                        .environmentObject(PeopleViewModel())
+                }
+            }
