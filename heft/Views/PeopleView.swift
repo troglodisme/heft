@@ -44,6 +44,7 @@ struct PeopleView: View {
                                 ZStack {
                                     Section {
                                         HStack{
+                                            Spacer()
                                             Image("person2")
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fill)
@@ -53,13 +54,16 @@ struct PeopleView: View {
                                                 .padding(.trailing, 15)
                                             VStack(spacing: 5){
                                                 NameText(text: person.name)
-                                                BirthdayText(date: person.birthDate)
-                                            }
+                                                BirthdayText(text: "\(person.age + 1) years old on \(person.birthDate.formatted(.dateTime.day().month()))")}
+                                            Text(String(person.countdownDays))
+                                                .foregroundColor(.red)
+                                            Spacer()
                                         }
                                         .frame(width: 334.0, height: 85.0)
                                         .overlay(RoundedRectangle(cornerRadius: 15).stroke(lineWidth: 2.0))
                                         .foregroundColor(Color.black)
                                         .background(RoundedRectangle(cornerRadius: 15).fill(.white))
+                                       
                                     }
                                 }
                                 .listRowBackground(Color("BackgroundColor"))

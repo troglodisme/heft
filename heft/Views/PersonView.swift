@@ -23,10 +23,10 @@ struct NameText: View{
 
 struct BirthdayText: View{
 
-    var date: Date
+    var text: String
 
     var body: some View{
-        Text(date, style: .date)
+        Text(text)
             .font(.body)
             .multilineTextAlignment(.leading)
             .foregroundColor(.black)
@@ -46,7 +46,7 @@ struct PersonView: View {
                         .padding(.trailing, 15)
                     VStack(spacing: 5){
                         NameText(text: "Jane Wilden")
-                        BirthdayText(date: Date())
+                        BirthdayText(text: "12")
                     }
                 }
                     .frame(width: 334.0, height: 85.0)
