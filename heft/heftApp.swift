@@ -12,10 +12,10 @@ struct heftApp: App {
     var body: some Scene {
         WindowGroup {
             
-//            ContentView()
-//                .environmentObject(PeopleViewModel())
+            ContentView()
+                .environmentObject(PeopleViewModel())
             
-            GTP3View()
+//            GTP3View()
         }
     }
 }

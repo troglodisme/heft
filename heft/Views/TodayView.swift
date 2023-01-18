@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodayView: View {
     
-    @StateObject private var peopleModel = PeopleViewModel()
+    @EnvironmentObject private var peopleModel : PeopleViewModel
 
     var body: some View {
         
@@ -17,46 +17,16 @@ struct TodayView: View {
             
             VStack {
                 
-                //This rectangle could be simplified
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(Color(.white))
-                        .frame(height: 250)
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                        .contrast(9.0)
-                        .shadow(radius: 10)
                     
-                    VStack{
-                        HStack{
-                            Spacer()
-                            Image("person")
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                            Spacer()
-                        }
                         
-                        Text ("It’s Helen's 27th birthday! ")
-                            .fontWeight(.semibold)
-                            .padding([.leading, .bottom], 20.0)
-                                                
-                        Button {
-                            print("Send message")
-                        } label: {
-                            Text ("Send message!")
-                        }
-                        .padding()
-                        .background(Color(.gray))
-                        .foregroundColor(.white)
-                        .clipShape(Capsule())
+                        ScrollView(.horizontal){
+                            HStack{
+                                TodayCard()
+                            }
                     }
                     
-                }
                 
-                //This should be filtered by date
-//                PeopleView(peopleModel: PeopleObservableObject())
-                
-                
+                Spacer()
             }
             .navigationTitle("Today")
             

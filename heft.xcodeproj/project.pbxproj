@@ -19,6 +19,7 @@
 		4E93D06A2970CBE300349128 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0692970CBE300349128 /* Model.swift */; };
 		4E93D06E2970D2F000349128 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06D2970D2F000349128 /* TodayView.swift */; };
 		4E93D0702970D44A00349128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06F2970D44A00349128 /* ContentView.swift */; };
+		D98CE7D32978B4B6009CE94D /* TodayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CE7D22978B4B6009CE94D /* TodayCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		4E93D0692970CBE300349128 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4E93D06D2970D2F000349128 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		4E93D06F2970D44A00349128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D98CE7D22978B4B6009CE94D /* TodayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				4E93D06D2970D2F000349128 /* TodayView.swift */,
+				D98CE7D22978B4B6009CE94D /* TodayCard.swift */,
 				4E22064529718CF000669FC3 /* PersonView.swift */,
 				4E93D0592970CB3400349128 /* PeopleView.swift */,
 				4E93D0672970CB8D00349128 /* AddPersonView.swift */,
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98CE7D32978B4B6009CE94D /* TodayCard.swift in Sources */,
 				4E93D05A2970CB3400349128 /* PeopleView.swift in Sources */,
 				4E93D06E2970D2F000349128 /* TodayView.swift in Sources */,
 				4E93D0702970D44A00349128 /* ContentView.swift in Sources */,
