@@ -29,8 +29,9 @@
          let birthdayThisYear = calendar.date(from: DateComponents(year: currentYear, month: birthMonth.month, day: birthDay.day))!
          let daysRemaining = calendar.dateComponents([.day], from: today, to: birthdayThisYear)
          
-         return daysRemaining.day!
-         
+//         return daysRemaining.day!
+         return daysRemaining.day! + 1 // <1>
+
      }
      
 //    var photo: String

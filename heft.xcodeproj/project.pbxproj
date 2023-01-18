@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4E22064629718CF000669FC3 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22064529718CF000669FC3 /* PersonView.swift */; };
 		4E2206482971B5E400669FC3 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2206472971B5E400669FC3 /* PeopleViewModel.swift */; };
+		4E4F84262976EDC300DDC3C2 /* GeneatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */; };
+		4E694846297846D000853D85 /* GPT3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E694845297846D000853D85 /* GPT3View.swift */; };
 		4E93D0582970CB3400349128 /* heftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0572970CB3400349128 /* heftApp.swift */; };
 		4E93D05A2970CB3400349128 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0592970CB3400349128 /* PeopleView.swift */; };
 		4E93D05C2970CB3500349128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E93D05B2970CB3500349128 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		4E22064529718CF000669FC3 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		4E2206472971B5E400669FC3 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneatorViewModel.swift; sourceTree = "<group>"; };
+		4E694845297846D000853D85 /* GPT3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPT3View.swift; sourceTree = "<group>"; };
 		4E93D0542970CB3400349128 /* heft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E93D0572970CB3400349128 /* heftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heftApp.swift; sourceTree = "<group>"; };
 		4E93D0592970CB3400349128 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 			children = (
 				4E93D0572970CB3400349128 /* heftApp.swift */,
 				4E93D06F2970D44A00349128 /* ContentView.swift */,
+				4E694845297846D000853D85 /* GPT3View.swift */,
 				4E93D06B2970CC1E00349128 /* Views */,
 				4E93D06C2970CC2600349128 /* Model */,
 				4E93D05B2970CB3500349128 /* Assets.xcassets */,
@@ -97,6 +102,7 @@
 			children = (
 				4E93D0692970CBE300349128 /* Model.swift */,
 				4E2206472971B5E400669FC3 /* PeopleViewModel.swift */,
+				4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +183,8 @@
 				4E93D0582970CB3400349128 /* heftApp.swift in Sources */,
 				4E93D0682970CB8D00349128 /* AddPersonView.swift in Sources */,
 				4E93D06A2970CBE300349128 /* Model.swift in Sources */,
+				4E694846297846D000853D85 /* GPT3View.swift in Sources */,
+				4E4F84262976EDC300DDC3C2 /* GeneatorViewModel.swift in Sources */,
 				4E2206482971B5E400669FC3 /* PeopleViewModel.swift in Sources */,
 				4E22064629718CF000669FC3 /* PersonView.swift in Sources */,
 			);
