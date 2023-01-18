@@ -36,8 +36,7 @@ struct BirthdayText: View{
 
 struct PersonView: View {
     var body: some View {
-        VStack {
-                HStack{
+        HStack{
                     Image("person2")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -54,7 +53,6 @@ struct PersonView: View {
                     .overlay(RoundedRectangle(cornerRadius: 15).stroke(lineWidth: 2.0))
                     .foregroundColor(Color.black)
                     .background(RoundedRectangle(cornerRadius: 15).fill(.white))
-                }
     }
 }
 
