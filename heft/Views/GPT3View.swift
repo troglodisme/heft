@@ -5,9 +5,16 @@ import SwiftUI
 struct GPT3View: View {
     
     @ObservedObject var generatorVM = GeneratorViewModel()
+    
     @EnvironmentObject var peopleModel: PeopleViewModel
+    
+    //Create variables to receive the selected person
+    var selectedPersonName: String
+    var selectedPersonAge: Int
 
     var body: some View {
+        
+        
         NavigationStack {
          
             VStack(alignment: .leading) {
@@ -19,6 +26,8 @@ struct GPT3View: View {
 
                     Text(message)
                     
+//                    TextField("Enter your message type", text: $selectedMessageType)
+                    
                 } else {
                     Text("No message yet...")
                 }
@@ -28,8 +37,10 @@ struct GPT3View: View {
                 //Get Birthday Message
                 
                 Button {
+                    
                     Task {
-                        await generatorVM.getBirthdayMessage()
+                        await generatorVM.getBirthdayMessage(personName: selectedPersonName,
+                                                             personAge: selectedPersonAge)
                     }
                     
                 } label: {
@@ -43,21 +54,11 @@ struct GPT3View: View {
         }
     }
     
-//    @ViewBuilder
-//    func buttonLabel(with text: String, and color: Color) -> some View {
-//        ZStack{
-//            RoundedRectangle(cornerRadius: 12)
-//                .frame(height: 55)
-//                .foregroundColor(color)
-//            Text(text)
-//                .foregroundColor(.white)
-//        }
-//    }
 }
 
-struct GPT3View_Previews: PreviewProvider {
-    static var previews: some View {
-        GPT3View()
-    }
-}
+//struct GPT3View_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GPT3View()
+//    }
+//}
 

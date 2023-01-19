@@ -17,7 +17,7 @@ struct TodayCard: View {
             
             ForEach(peopleModel.people, id: \.id) { person in
                 
-                if person.countdownDays == 0 {
+                if person.countdownDays == 1 {
                     
                     ZStack{
                         Rectangle()
@@ -41,20 +41,16 @@ struct TodayCard: View {
                                 .fontWeight(.semibold)
                                 .padding([.leading, .bottom], 20.0)
                             
-                            NavigationLink(destination: GPT3View()) {
+                            
+                            NavigationLink(destination: GPT3View(selectedPersonName: person.name,
+                                                                 selectedPersonAge: person.age
+                                                                 )
+                            ) {
                                 
                                 Text("Send Message")
                                 
                             }
-//                            Button {
-//                                print("Send message")
-//                            } label: {
-//                                Text ("Send message!")
-//                            }
-//                            .padding()
-//                            .background(Color(.gray))
-//                            .foregroundColor(.white)
-//                            .clipShape(Capsule())
+                            
                             
                         }
 
