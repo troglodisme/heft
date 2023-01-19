@@ -49,13 +49,13 @@ struct TodayView: View {
                         .background(Color(.gray))
                         .foregroundColor(.white)
                         .clipShape(Capsule())
+                        
                     }
                     
                 }
                 
                 //This should be filtered by date
 //                PeopleView(peopleModel: PeopleObservableObject())
-                
                 
             }
             .navigationTitle("Today")

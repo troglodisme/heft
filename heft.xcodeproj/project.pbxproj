@@ -69,7 +69,6 @@
 			children = (
 				4E93D0572970CB3400349128 /* heftApp.swift */,
 				4E93D06F2970D44A00349128 /* ContentView.swift */,
-				4E694845297846D000853D85 /* GPT3View.swift */,
 				4E93D06B2970CC1E00349128 /* Views */,
 				4E93D06C2970CC2600349128 /* Model */,
 				4E93D05B2970CB3500349128 /* Assets.xcassets */,
@@ -93,6 +92,7 @@
 				4E22064529718CF000669FC3 /* PersonView.swift */,
 				4E93D0592970CB3400349128 /* PeopleView.swift */,
 				4E93D0672970CB8D00349128 /* AddPersonView.swift */,
+				4E694845297846D000853D85 /* GPT3View.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
