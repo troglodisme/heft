@@ -63,7 +63,6 @@ struct PeopleView: View {
                                         .overlay(RoundedRectangle(cornerRadius: 15).stroke(lineWidth: 2.0))
                                         .foregroundColor(Color.black)
                                         .background(RoundedRectangle(cornerRadius: 15).fill(.white))
-                                       
                                     }
                                 }
                                 .listRowBackground(Color("BackgroundColor"))
@@ -75,7 +74,7 @@ struct PeopleView: View {
                     }
             }
         }
-        }
+    }
         
         func delete(at offsets: IndexSet) {
             peopleModel.people.remove(atOffsets: offsets)

@@ -35,11 +35,13 @@ struct AddPersonView: View {
                             "Enter full name",
                             text: $name,
                             onCommit: {
-                                print(self.name)
+                                if (!self.name.isEmpty) {
+                                    print(self.name)
+                                }
+                               
                             }
                         )
                         Image(systemName: "x.circle.fill")
-                        
                     }
                 }
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -66,12 +68,21 @@ struct AddPersonView: View {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Done") {
                             print("done tapped!")
+                            
+                            if name.isEmpty {
+                                print("your name is empty")
+                            } else {
+                                print(name)
+                            }
+                            
                             dismiss()
                             
                             //move presentation logic to view model
                             let newPerson = Person(name: name, birthDate: birthday)
                             print(newPerson)
                             peopleModel.people.append(newPerson)
+                            
+                            
                         }
                     }
                 }

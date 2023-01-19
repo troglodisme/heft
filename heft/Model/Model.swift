@@ -16,6 +16,7 @@
          let calendar = Calendar.current
          let today = Date()
          let ageComponent = calendar.dateComponents([.year], from: birthDate, to: today)
+         
          return ageComponent.year!
  }
      
@@ -32,6 +33,19 @@
          return daysRemaining.day!
          
      }
+     
+     enum ValidationError : LocalizedError{
+         case emptyName
+         
+         var errorDescription: String?{
+             switch self{
+             case .emptyName:
+                 return "Name must not be empty"
+             }
+         }
+     }
+     
+    
      
 //    var photo: String
 //    var daysRemaining: Int

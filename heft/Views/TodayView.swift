@@ -16,11 +16,7 @@ struct TodayView: View {
             ZStack {
                 Color("BackgroundColor").edgesIgnoringSafeArea(.all)
                 VStack {
-                    Text("Today's Birthday")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(.black)
-                        .multilineTextAlignment(.center)
+                   TitleText(text: "Today's Birthday")
                     VStack{
                             HStack{
                                 Spacer()
@@ -29,12 +25,11 @@ struct TodayView: View {
                                     .frame(width: 100, height: 100)
                                 Spacer()
                             }
-                            Text ("It’s Helen's 27th birthday!")
-                                .fontWeight(.semibold)
-                                .padding([.leading, .bottom], 20.0)
-                            
-                            Button(action:{}) {
-                                Text("Generate AI Text")
+                            BodyText(text: "It’s Helen's 27th birthday!")
+                            Button(action:{
+                                
+                            }) {
+                                Text("Send Wishes!")
                             }
                             .padding(.horizontal, 50)
                             .padding(.vertical, 15)
@@ -47,7 +42,7 @@ struct TodayView: View {
                         .background(Color.white)
                         .cornerRadius(10)
                         .transition(.scale)
-                    .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(.black), lineWidth: 2, antialiased: true))
+                        .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(.black), lineWidth: 2, antialiased: true))
                 }
                     //This should be filtered by date
                     //                PeopleView(peopleModel: PeopleObservableObject())

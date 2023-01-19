@@ -17,6 +17,7 @@
 		4E93D06A2970CBE300349128 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0692970CBE300349128 /* Model.swift */; };
 		4E93D06E2970D2F000349128 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06D2970D2F000349128 /* TodayView.swift */; };
 		4E93D0702970D44A00349128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06F2970D44A00349128 /* ContentView.swift */; };
+		DECC21742978869B0054283B /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC21732978869B0054283B /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4E93D0692970CBE300349128 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4E93D06D2970D2F000349128 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		4E93D06F2970D44A00349128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DECC21732978869B0054283B /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				4E93D06F2970D44A00349128 /* ContentView.swift */,
 				4E93D06B2970CC1E00349128 /* Views */,
 				4E93D06C2970CC2600349128 /* Model */,
+				DECC21772979813C0054283B /* ViewModel */,
 				4E93D05B2970CB3500349128 /* Assets.xcassets */,
 				4E93D05D2970CB3500349128 /* Preview Content */,
 			);
@@ -88,6 +91,7 @@
 				4E22064529718CF000669FC3 /* PersonView.swift */,
 				4E93D0592970CB3400349128 /* PeopleView.swift */,
 				4E93D0672970CB8D00349128 /* AddPersonView.swift */,
+				DECC21732978869B0054283B /* TextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -96,9 +100,16 @@
 			isa = PBXGroup;
 			children = (
 				4E93D0692970CBE300349128 /* Model.swift */,
-				4E2206472971B5E400669FC3 /* PeopleViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DECC21772979813C0054283B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4E2206472971B5E400669FC3 /* PeopleViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				4E93D0582970CB3400349128 /* heftApp.swift in Sources */,
 				4E93D0682970CB8D00349128 /* AddPersonView.swift in Sources */,
 				4E93D06A2970CBE300349128 /* Model.swift in Sources */,
+				DECC21742978869B0054283B /* TextView.swift in Sources */,
 				4E2206482971B5E400669FC3 /* PeopleViewModel.swift in Sources */,
 				4E22064629718CF000669FC3 /* PersonView.swift in Sources */,
 			);
