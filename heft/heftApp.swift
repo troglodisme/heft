@@ -11,8 +11,11 @@ import SwiftUI
 struct heftApp: App {
     var body: some Scene {
         WindowGroup {
+            
             ContentView()
                 .environmentObject(PeopleViewModel())
+            
+//            GTP3View()
         }
     }
 }
