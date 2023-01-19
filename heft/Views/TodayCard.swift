@@ -12,7 +12,7 @@ struct TodayCard: View {
     
     var body: some View {
         ForEach(peopleModel.people, id: \.id) { person in
-            
+            if person.countdownDays == 0 {
                 ZStack{
                     Rectangle()
                         .foregroundColor(Color(.white))
@@ -33,7 +33,7 @@ struct TodayCard: View {
                         
                         
                         
-                        Text (person.name)
+                        Text ("\(person.name) turns \(person.age) today!")
                             .fontWeight(.semibold)
                             .padding([.leading, .bottom], 20.0)
                         
@@ -49,7 +49,8 @@ struct TodayCard: View {
                     }
                     
                 }
-            
+                
+            }
         }
     }
 }
