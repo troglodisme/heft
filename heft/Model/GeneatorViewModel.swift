@@ -26,7 +26,7 @@ class GeneratorViewModel: ObservableObject {
 
     var urlComponents = URLComponents(string: "https://api.openai.com")!
 
-    func getBirthdayMessage(personName: String, personAge: Int) async {
+    func getBirthdayMessage(personName: String, personAge: Int, messageType) async {
 
         urlComponents.path = "/v1/completions"
 
