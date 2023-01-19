@@ -14,10 +14,6 @@ class GeneratorViewModel: ObservableObject {
 
     @Published var generatedMessage: String = ""
         
-    let model = "text-davinci-003"
-    let prompt = "Write a friendly birthday card message for whose birthday is today, it should be signed by Giulio"
-    let temperature = 0.9
-    let max_tokens = 300
     
     //Import API Key from Secret file
     let apiKey = APIKey.apiKey
@@ -26,14 +22,14 @@ class GeneratorViewModel: ObservableObject {
 
     var urlComponents = URLComponents(string: "https://api.openai.com")!
 
-    func getBirthdayMessage(personName: String, personAge: Int, messageType) async {
+    func getBirthdayMessage(personName: String, personAge: Int, messageType: String) async {
 
         urlComponents.path = "/v1/completions"
 
-        let requestBody = GPT3Request(model: model,
-                                      prompt: "Write a happy birthday card message for \(personName) who is \(personAge) today",
-                                      temperature: temperature,
-                                      max_tokens: max_tokens)
+        let requestBody = GPT3Request(model: "text-davinci-003",
+                                      prompt: "Write a \(messageType) birthday card message for \(personName) who is \(personAge) today",
+                                      temperature: 0.9,
+                                      max_tokens: 300)
         
         let url = urlComponents.url
         var request = URLRequest(url: url!)
