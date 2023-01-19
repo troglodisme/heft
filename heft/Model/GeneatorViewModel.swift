@@ -13,20 +13,20 @@ struct GPT3Request: Encodable {
 class GeneratorViewModel: ObservableObject {
 
     @Published var generatedMessage: String = ""
-        
-    let model = "text-davinci-003"
-    let prompt = "Write a formal birthday card message for Tim Cook who is 62 today."
-    let temperature = 0.9
-    let max_tokens = 200
     
-    let apiKey = "APIKEY"
+    let model = "text-davinci-003"
+    let prompt = "Write a friendly birthday card message for Tanya whose birthday is today."
+    let temperature = 0.9
+    let max_tokens = 300
+    
+    //Import API Key from Secret file
+    let apiKey = APIKey.apiKey
 
     let decoder = JSONDecoder()
 
     var urlComponents = URLComponents(string: "https://api.openai.com")!
 
     func getBirthdayMessage() async {
-
 
         urlComponents.path = "/v1/completions"
 

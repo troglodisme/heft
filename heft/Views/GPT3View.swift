@@ -2,10 +2,11 @@
 
 import SwiftUI
 
-struct GTP3View: View {
+struct GPT3View: View {
     
     @ObservedObject var generatorVM = GeneratorViewModel()
-    
+    @EnvironmentObject var peopleModel: PeopleViewModel
+
     var body: some View {
         NavigationStack {
          
@@ -17,9 +18,9 @@ struct GTP3View: View {
                         .font(.headline)
 
                     Text(message)
-
+                    
                 } else {
-                    Text("No Learner yet...")
+                    Text("No message yet...")
                 }
 
                 Spacer()
@@ -32,8 +33,7 @@ struct GTP3View: View {
                     }
                     
                 } label: {
-                    buttonLabel(with: "Generate message",
-                                and: .accentColor)
+                    Text("Generate message")
                 }
                 
                 
@@ -43,21 +43,21 @@ struct GTP3View: View {
         }
     }
     
-    @ViewBuilder
-    func buttonLabel(with text: String, and color: Color) -> some View {
-        ZStack{
-            RoundedRectangle(cornerRadius: 12)
-                .frame(height: 55)
-                .foregroundColor(color)
-            Text(text)
-                .foregroundColor(.white)
-        }
-    }
+//    @ViewBuilder
+//    func buttonLabel(with text: String, and color: Color) -> some View {
+//        ZStack{
+//            RoundedRectangle(cornerRadius: 12)
+//                .frame(height: 55)
+//                .foregroundColor(color)
+//            Text(text)
+//                .foregroundColor(.white)
+//        }
+//    }
 }
 
-struct GTP3View_Previews: PreviewProvider {
+struct GPT3View_Previews: PreviewProvider {
     static var previews: some View {
-        GTP3View()
+        GPT3View()
     }
 }
 

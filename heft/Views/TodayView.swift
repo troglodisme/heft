@@ -9,22 +9,19 @@ import SwiftUI
 
 struct TodayView: View {
     
-    @EnvironmentObject private var peopleModel : PeopleViewModel
-
+    @EnvironmentObject private var peopleModel: PeopleViewModel
+    
     var body: some View {
         
         NavigationStack {
             
             VStack {
                 
-                    
-                        
-                        ScrollView(.horizontal){
-                            HStack{
-                                TodayCard()
-                            }
+                ScrollView(.horizontal){
+                    HStack{
+                        TodayCard()
                     }
-                    
+                }
                 
                 Spacer()
             }

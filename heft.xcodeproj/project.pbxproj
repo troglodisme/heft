@@ -19,6 +19,7 @@
 		4E93D06A2970CBE300349128 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0692970CBE300349128 /* Model.swift */; };
 		4E93D06E2970D2F000349128 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06D2970D2F000349128 /* TodayView.swift */; };
 		4E93D0702970D44A00349128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06F2970D44A00349128 /* ContentView.swift */; };
+		4EBF10B72979621200777729 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF10B62979621200777729 /* APIKey.swift */; };
 		D98CE7D32978B4B6009CE94D /* TodayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CE7D22978B4B6009CE94D /* TodayCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		4E93D0692970CBE300349128 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4E93D06D2970D2F000349128 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		4E93D06F2970D44A00349128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4EBF10B62979621200777729 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		D98CE7D22978B4B6009CE94D /* TodayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +73,6 @@
 			children = (
 				4E93D0572970CB3400349128 /* heftApp.swift */,
 				4E93D06F2970D44A00349128 /* ContentView.swift */,
-				4E694845297846D000853D85 /* GPT3View.swift */,
 				4E93D06B2970CC1E00349128 /* Views */,
 				4E93D06C2970CC2600349128 /* Model */,
 				4E93D05B2970CB3500349128 /* Assets.xcassets */,
@@ -96,6 +97,8 @@
 				4E22064529718CF000669FC3 /* PersonView.swift */,
 				4E93D0592970CB3400349128 /* PeopleView.swift */,
 				4E93D0672970CB8D00349128 /* AddPersonView.swift */,
+				4E694845297846D000853D85 /* GPT3View.swift */,
+				4EBF10B92979622400777729 /* Secrets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,8 +109,16 @@
 				4E93D0692970CBE300349128 /* Model.swift */,
 				4E2206472971B5E400669FC3 /* PeopleViewModel.swift */,
 				4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */,
+				4EBF10B62979621200777729 /* APIKey.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4EBF10B92979622400777729 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Secrets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				4E694846297846D000853D85 /* GPT3View.swift in Sources */,
 				4E4F84262976EDC300DDC3C2 /* GeneatorViewModel.swift in Sources */,
 				4E2206482971B5E400669FC3 /* PeopleViewModel.swift in Sources */,
+				4EBF10B72979621200777729 /* APIKey.swift in Sources */,
 				4E22064629718CF000669FC3 /* PersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
