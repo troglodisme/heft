@@ -11,8 +11,6 @@ struct AddPersonView: View {
     
     @Environment(\.dismiss) var dismiss
     
-//    @Binding var people: [Person]
-    
     @EnvironmentObject var peopleModel: PeopleViewModel
 
     @State private var birthday = Date()
