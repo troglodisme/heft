@@ -16,11 +16,16 @@ struct ContentView: View {
                     Image(systemName: "house.fill")
                 }
             
-            PeopleView()
-//            PeopleView(peopleModel: PeopleObservableObject())
+            SavedMessages()
                 .tabItem{
-                    Image(systemName: "person.fill")
+                    Image(systemName: "star.fill")
                 }
+            
+            SettingsView()
+                .tabItem{
+                    Image(systemName: "gear")
+                }
+            
         }
         
     }
