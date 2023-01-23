@@ -11,28 +11,44 @@ struct TodayView: View {
     
     @EnvironmentObject private var peopleModel: PeopleViewModel
     
+    @State private var isSheetShowing = false
+
+    
     var body: some View {
         
         NavigationStack {
             
             VStack {
                 
-                ScrollView(.horizontal) { 
+                ScrollView(.horizontal) {
                     
-                    HStack{
+                    HStack { 
                         TodayCard()
                     }
                 
                 }
-                
-
-                
+                                
                 PeopleView()
 
-                
             }
             .navigationTitle("Today")
+              
+            .toolbar {
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isSheetShowing.toggle()
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                    .sheet(isPresented: $isSheetShowing) {
                         
+                        AddPersonView()
+                        
+                    }
+                }
+            }
+            
         }
     }
 }

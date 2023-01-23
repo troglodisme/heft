@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0C0AE3297ED0B600B3312F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C0AE2297ED0B600B3312F /* SettingsView.swift */; };
+		4E0C0AE5297ED11F00B3312F /* SavedMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C0AE4297ED11F00B3312F /* SavedMessages.swift */; };
 		4E22064629718CF000669FC3 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22064529718CF000669FC3 /* PersonView.swift */; };
 		4E2206482971B5E400669FC3 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2206472971B5E400669FC3 /* PeopleViewModel.swift */; };
 		4E4F84262976EDC300DDC3C2 /* GeneatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0C0AE2297ED0B600B3312F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4E0C0AE4297ED11F00B3312F /* SavedMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMessages.swift; sourceTree = "<group>"; };
 		4E22064529718CF000669FC3 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		4E2206472971B5E400669FC3 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneatorViewModel.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				4E93D0592970CB3400349128 /* PeopleView.swift */,
 				4E93D0672970CB8D00349128 /* AddPersonView.swift */,
 				4E694845297846D000853D85 /* GPT3View.swift */,
+				4E0C0AE2297ED0B600B3312F /* SettingsView.swift */,
+				4E0C0AE4297ED11F00B3312F /* SavedMessages.swift */,
 				4EBF10B92979622400777729 /* Secrets */,
 			);
 			path = Views;
@@ -199,10 +205,12 @@
 				4E93D0682970CB8D00349128 /* AddPersonView.swift in Sources */,
 				4E93D06A2970CBE300349128 /* Model.swift in Sources */,
 				4E694846297846D000853D85 /* GPT3View.swift in Sources */,
+				4E0C0AE5297ED11F00B3312F /* SavedMessages.swift in Sources */,
 				4E4F84262976EDC300DDC3C2 /* GeneatorViewModel.swift in Sources */,
 				4E2206482971B5E400669FC3 /* PeopleViewModel.swift in Sources */,
 				4EBF10B72979621200777729 /* APIKey.swift in Sources */,
 				4E22064629718CF000669FC3 /* PersonView.swift in Sources */,
+				4E0C0AE3297ED0B600B3312F /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

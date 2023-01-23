@@ -19,6 +19,10 @@ struct PeopleView: View {
         
         NavigationStack {
             
+            VStack{
+                Text("filter by:")
+            }
+            
             List {
                 
                 ForEach(peopleModel.people, id: \.id) { person in
@@ -51,22 +55,7 @@ struct PeopleView: View {
                     }
                 }
             }
-            .navigationBarTitle("People")
-            .toolbar {
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        isSheetShowing.toggle()
-                    }) {
-                        Image(systemName: "plus")
-                    }
-                    .sheet(isPresented: $isSheetShowing) {
-                        
-                        AddPersonView()
-                        
-                    }
-                }
-            }
+  
         }
     }
 }
