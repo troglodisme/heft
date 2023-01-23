@@ -17,24 +17,29 @@ struct TodayView: View {
             
             VStack {
                 
-                ScrollView(.horizontal){
+                ScrollView(.horizontal) { 
+                    
                     HStack{
                         TodayCard()
                     }
+                
                 }
                 
-                Spacer()
+
+                
+                PeopleView()
+
+                
             }
             .navigationTitle("Today")
-            
-            
+                        
         }
-        
     }
 }
 
 struct TodayView_Previews: PreviewProvider {
     static var previews: some View {
         TodayView()
+            .environmentObject(PeopleViewModel())
     }
 }
