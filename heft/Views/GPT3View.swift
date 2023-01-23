@@ -8,6 +8,7 @@ struct GPT3View: View {
     
     @EnvironmentObject var peopleModel: PeopleViewModel
     
+    
     //Create variables to receive the selected person
     var selectedPersonName: String
     var selectedPersonAge: Int
@@ -20,8 +21,6 @@ struct GPT3View: View {
         
         NavigationStack {
             
-            
-  
             VStack(alignment: .leading) {
                 
                 HStack{
@@ -38,49 +37,56 @@ struct GPT3View: View {
                     }
                     
                     Text("Birthday message")
-                        
+                    
                 }
                 
-
                 
-
-                    
                 if let message = generatorVM.generatedMessage {
                     
-
+                    
                     
                     Text(message)
                     
-                        
-                    } else {
-                        Text("No message yet...")
-                    }
                     
-                    Spacer()
-                    
+                } else {
+                    Text("No message yet...")
+                }
                 
-                    //Get Birthday Message
+                Spacer()
+                
+                
+                HStack{
                     
+                    //Generate Birthday Message
                     Button {
-                        
                         Task {
                             await generatorVM.getBirthdayMessage(personName: selectedPersonName,
                                                                  personAge: selectedPersonAge,
                                                                  messageType: selectedMessageType)
                         }
-                        
                     } label: {
                         Text("Generate message")
                     }
                     
+                    //Generate Birthday Message
+                    Button {
+                        print("Save message")
+                        
+                    } label: {
+                        Text("Save message")
+                    }
                     
                 }
-                    .padding()
-                    .navigationTitle("BirthdayCard")
+
+                
+                
             }
+            .padding()
+            .navigationTitle("BirthdayCard")
         }
-        
     }
+    
+}
 
 
 //    struct GPT3View_Previews: PreviewProvider {

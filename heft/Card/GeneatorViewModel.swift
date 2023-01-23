@@ -12,8 +12,7 @@ struct GPT3Request: Encodable {
 @MainActor
 class GeneratorViewModel: ObservableObject {
 
-    @Published var generatedMessage: String = ""
-        
+    @Published var generatedMessage: String = ""        
     
     //Import API Key from Secret file
     let apiKey = APIKey.apiKey

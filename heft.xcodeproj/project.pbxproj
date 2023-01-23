@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4E0C0AE3297ED0B600B3312F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C0AE2297ED0B600B3312F /* SettingsView.swift */; };
 		4E0C0AE5297ED11F00B3312F /* SavedMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C0AE4297ED11F00B3312F /* SavedMessages.swift */; };
+		4E0C0AE7297EE46900B3312F /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C0AE6297EE46900B3312F /* CardModel.swift */; };
+		4E0C0AE9297EE4FD00B3312F /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C0AE8297EE4FD00B3312F /* CardsViewModel.swift */; };
 		4E22064629718CF000669FC3 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22064529718CF000669FC3 /* PersonView.swift */; };
 		4E2206482971B5E400669FC3 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2206472971B5E400669FC3 /* PeopleViewModel.swift */; };
 		4E4F84262976EDC300DDC3C2 /* GeneatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */; };
@@ -18,7 +20,7 @@
 		4E93D05C2970CB3500349128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E93D05B2970CB3500349128 /* Assets.xcassets */; };
 		4E93D05F2970CB3500349128 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E93D05E2970CB3500349128 /* Preview Assets.xcassets */; };
 		4E93D0682970CB8D00349128 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0672970CB8D00349128 /* AddPersonView.swift */; };
-		4E93D06A2970CBE300349128 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0692970CBE300349128 /* Model.swift */; };
+		4E93D06A2970CBE300349128 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D0692970CBE300349128 /* PersonModel.swift */; };
 		4E93D06E2970D2F000349128 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06D2970D2F000349128 /* TodayView.swift */; };
 		4E93D0702970D44A00349128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06F2970D44A00349128 /* ContentView.swift */; };
 		4EBF10B72979621200777729 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF10B62979621200777729 /* APIKey.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		4E0C0AE2297ED0B600B3312F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4E0C0AE4297ED11F00B3312F /* SavedMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMessages.swift; sourceTree = "<group>"; };
+		4E0C0AE6297EE46900B3312F /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		4E0C0AE8297EE4FD00B3312F /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
 		4E22064529718CF000669FC3 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		4E2206472971B5E400669FC3 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneatorViewModel.swift; sourceTree = "<group>"; };
@@ -38,7 +42,7 @@
 		4E93D05B2970CB3500349128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E93D05E2970CB3500349128 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E93D0672970CB8D00349128 /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
-		4E93D0692970CBE300349128 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4E93D0692970CBE300349128 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		4E93D06D2970D2F000349128 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		4E93D06F2970D44A00349128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4EBF10B62979621200777729 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -56,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E0C0AEA297EE73200B3312F /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				4E0C0AE6297EE46900B3312F /* CardModel.swift */,
+				4E0C0AE8297EE4FD00B3312F /* CardsViewModel.swift */,
+				4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */,
+				4EBF10B62979621200777729 /* APIKey.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		4E93D04B2970CB3400349128 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +93,7 @@
 				4E93D0572970CB3400349128 /* heftApp.swift */,
 				4E93D06F2970D44A00349128 /* ContentView.swift */,
 				4E93D06B2970CC1E00349128 /* Views */,
+				4E0C0AEA297EE73200B3312F /* Card */,
 				4E93D06C2970CC2600349128 /* Model */,
 				4E93D05B2970CB3500349128 /* Assets.xcassets */,
 				4E93D05D2970CB3500349128 /* Preview Content */,
@@ -111,10 +127,8 @@
 		4E93D06C2970CC2600349128 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4E93D0692970CBE300349128 /* Model.swift */,
+				4E93D0692970CBE300349128 /* PersonModel.swift */,
 				4E2206472971B5E400669FC3 /* PeopleViewModel.swift */,
-				4E4F84252976EDC300DDC3C2 /* GeneatorViewModel.swift */,
-				4EBF10B62979621200777729 /* APIKey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,7 +209,9 @@
 				4E93D0702970D44A00349128 /* ContentView.swift in Sources */,
 				4E93D0582970CB3400349128 /* heftApp.swift in Sources */,
 				4E93D0682970CB8D00349128 /* AddPersonView.swift in Sources */,
-				4E93D06A2970CBE300349128 /* Model.swift in Sources */,
+				4E0C0AE9297EE4FD00B3312F /* CardsViewModel.swift in Sources */,
+				4E93D06A2970CBE300349128 /* PersonModel.swift in Sources */,
+				4E0C0AE7297EE46900B3312F /* CardModel.swift in Sources */,
 				4E694846297846D000853D85 /* GPT3View.swift in Sources */,
 				4E0C0AE5297ED11F00B3312F /* SavedMessages.swift in Sources */,
 				4E4F84262976EDC300DDC3C2 /* GeneatorViewModel.swift in Sources */,

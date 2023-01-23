@@ -20,7 +20,7 @@ struct PeopleView: View {
         NavigationStack {
             
             VStack{
-                Text("filter by:")
+                Text("add picker/filter here:")
             }
             
             List {
@@ -54,10 +54,16 @@ struct PeopleView: View {
                             .foregroundColor(.red)
                     }
                 }
+                .onDelete(perform: delete)
             }
   
         }
     }
+    
+    func delete(at offsets: IndexSet) {
+          peopleModel.people.remove(atOffsets: offsets)
+      }
+    
 }
 
 

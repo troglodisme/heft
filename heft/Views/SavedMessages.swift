@@ -9,9 +9,15 @@ import SwiftUI
 
 struct SavedMessages: View {
     
+    @StateObject var cardsVM = CardsViewModel()
+    
     var body: some View {
         
-        Text("My saved messages!")
+        VStack{
+            Text(cardsVM.messages[0].message)
+                .padding()
+        }
+
         
     }
     
