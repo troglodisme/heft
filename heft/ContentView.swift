@@ -17,6 +17,7 @@ struct ContentView: View {
                 }
             
             SavedMessages()
+//            SavedMessages(cardsVM: CardsViewModel())
                 .tabItem{
                     Image(systemName: "star.fill")
                 }

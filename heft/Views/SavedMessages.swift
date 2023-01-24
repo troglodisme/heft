@@ -9,13 +9,16 @@ import SwiftUI
 
 struct SavedMessages: View {
     
-    @StateObject var cardsVM = CardsViewModel()
+//    @ObservedObject var cardsVM: CardsViewModel
     
     var body: some View {
         
         VStack{
-            Text(cardsVM.messages[0].message)
-                .padding()
+//            Text(cardsVM.messages[0].message)
+            
+//            Text(cardsVM.messages[1].message)
+
+//                .padding()
         }
 
         
@@ -23,8 +26,8 @@ struct SavedMessages: View {
     
 }
 
-struct SavedMessages_Previews: PreviewProvider {
-    static var previews: some View {
-        SavedMessages()
-    }
-}
+//struct SavedMessages_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SavedMessages()
+//    }
+//}

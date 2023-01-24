@@ -8,6 +8,7 @@ struct GPT3View: View {
     
     @EnvironmentObject var peopleModel: PeopleViewModel
     
+    @StateObject var cardsModel = CardsViewModel()
     
     //Create variables to receive the selected person
     var selectedPersonName: String
@@ -71,6 +72,10 @@ struct GPT3View: View {
                     //Generate Birthday Message
                     Button {
                         print("Save message")
+                        let newCard = Card(message: "test test test", wasMessageSent: false)
+                        cardsModel.messages.append(newCard)
+                        
+                        //append message to CardsVIewModel
                         
                     } label: {
                         Text("Save message")

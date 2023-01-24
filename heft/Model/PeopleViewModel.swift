@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class PeopleViewModel: ObservableObject {
     
     @Published var message: String = "yo"
