@@ -14,4 +14,5 @@ struct Card {
     var wasMessageSent: Bool
     
     
+    
 }

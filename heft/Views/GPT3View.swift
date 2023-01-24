@@ -8,7 +8,7 @@ struct GPT3View: View {
     
     @EnvironmentObject var peopleModel: PeopleViewModel
     
-    @StateObject var cardsModel = CardsViewModel()
+    @EnvironmentObject var cardsModel: CardsViewModel
     
     //Create variables to receive the selected person
     var selectedPersonName: String
@@ -44,17 +44,13 @@ struct GPT3View: View {
                 
                 if let message = generatorVM.generatedMessage {
                     
-                    
-                    
                     Text(message)
-                    
-                    
+                                    
                 } else {
                     Text("No message yet...")
                 }
                 
                 Spacer()
-                
                 
                 HStack{
                     
@@ -72,7 +68,7 @@ struct GPT3View: View {
                     //Generate Birthday Message
                     Button {
                         print("Save message")
-                        let newCard = Card(message: "test test test", wasMessageSent: false)
+                        let newCard = Card(message: generatorVM.generatedMessage, wasMessageSent: false)
                         cardsModel.messages.append(newCard)
                         
                         //append message to CardsVIewModel
@@ -80,6 +76,10 @@ struct GPT3View: View {
                     } label: {
                         Text("Save message")
                     }
+                    
+                    Text("Share")
+                    // Add image renderer https://developer.apple.com/documentation/swiftui/imagerenderer
+                    // Add share link https://developer.apple.com/documentation/SwiftUI/ShareLink
                     
                 }
 

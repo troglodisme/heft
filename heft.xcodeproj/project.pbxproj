@@ -118,8 +118,8 @@
 				4E93D0592970CB3400349128 /* PeopleView.swift */,
 				4E93D0672970CB8D00349128 /* AddPersonView.swift */,
 				4E694845297846D000853D85 /* GPT3View.swift */,
-				4E0C0AE2297ED0B600B3312F /* SettingsView.swift */,
 				4E0C0AE4297ED11F00B3312F /* SavedMessages.swift */,
+				4E0C0AE2297ED0B600B3312F /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

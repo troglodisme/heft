@@ -9,18 +9,19 @@ import SwiftUI
 
 struct SavedMessages: View {
     
-//    @ObservedObject var cardsVM: CardsViewModel
+    @EnvironmentObject var cardsVM: CardsViewModel
     
     var body: some View {
         
-        VStack{
-//            Text(cardsVM.messages[0].message)
+        List{
             
-//            Text(cardsVM.messages[1].message)
-
-//                .padding()
+            ForEach(cardsVM.messages, id: \.id) { card in
+                
+                Text(card.message)
+            }
         }
-
+                
+        .padding()
         
     }
     

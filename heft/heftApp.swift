@@ -14,6 +14,7 @@ struct heftApp: App {
             
             ContentView()
                 .environmentObject(PeopleViewModel())
+                .environmentObject(CardsViewModel())
             
 //            GTP3View()
         }
