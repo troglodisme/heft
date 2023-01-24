@@ -49,7 +49,10 @@ struct GPT3View: View {
                         HStack{
                             Button {
                                 print("Save Message")
-                                let newCard = Card(message: generatorVM.generatedMessage, wasMessageSent: false)
+                                let newCard = Card(person: Person(name: selectedPersonName),
+                                                   message: generatorVM.generatedMessage,
+                                                   wasMessageSent: false)
+  
                                 cardsModel.messages.append(newCard)
                                 
                                 //append message to CardsVIewModel
@@ -62,7 +65,6 @@ struct GPT3View: View {
                             Text("or")
                             
                             ShareLink(item: "", subject: Text("Share Message"), message: Text(generatorVM.generatedMessage))
-
                             
                             // Add image renderer https://developer.apple.com/documentation/swiftui/imagerenderer
                         }

@@ -9,17 +9,20 @@ import SwiftUI
 
 struct SavedMessages: View {
     
-    @EnvironmentObject var cardsVM: CardsViewModel
+//    @EnvironmentObject var cardsVM: CardsViewModel
+    
+    var card: Card
     
     var body: some View {
         
-        List{
-            
-            ForEach(cardsVM.messages, id: \.id) { card in
-                
+//        List{
+//
+//            ForEach(cardsVM.messages, id: \.id) { card in
+//
                 Text(card.message)
-            }
-        }
+        
+//            }
+//        }
                 
         .padding()
         

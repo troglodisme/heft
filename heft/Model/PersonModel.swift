@@ -10,7 +10,7 @@
     
     let id = UUID()
     var name: String
-    var birthDate: Date
+    var birthDate =  Date()
      
      var age: Int {
          let calendar = Calendar.current

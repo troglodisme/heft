@@ -16,7 +16,7 @@ struct ContentView: View {
                     Image(systemName: "house.fill")
                 }
             
-            SavedMessages()
+            ListSavedMessageView()
                 .tabItem{
                     Image(systemName: "star.fill")
                 }

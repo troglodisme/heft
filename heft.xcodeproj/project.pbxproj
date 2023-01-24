@@ -24,6 +24,7 @@
 		4E93D06E2970D2F000349128 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06D2970D2F000349128 /* TodayView.swift */; };
 		4E93D0702970D44A00349128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06F2970D44A00349128 /* ContentView.swift */; };
 		4EBF10B72979621200777729 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF10B62979621200777729 /* APIKey.swift */; };
+		4ED02B02298044BE0010FFF9 /* ListSavedMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED02B01298044BE0010FFF9 /* ListSavedMessageView.swift */; };
 		D98CE7D32978B4B6009CE94D /* TodayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CE7D22978B4B6009CE94D /* TodayCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		4E93D06D2970D2F000349128 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		4E93D06F2970D44A00349128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4EBF10B62979621200777729 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		4ED02B01298044BE0010FFF9 /* ListSavedMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSavedMessageView.swift; sourceTree = "<group>"; };
 		D98CE7D22978B4B6009CE94D /* TodayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 				4E694845297846D000853D85 /* GPT3View.swift */,
 				4E0C0AE4297ED11F00B3312F /* SavedMessages.swift */,
 				4E0C0AE2297ED0B600B3312F /* SettingsView.swift */,
+				4ED02B01298044BE0010FFF9 /* ListSavedMessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				4E93D0682970CB8D00349128 /* AddPersonView.swift in Sources */,
 				4E0C0AE9297EE4FD00B3312F /* CardsViewModel.swift in Sources */,
 				4E93D06A2970CBE300349128 /* PersonModel.swift in Sources */,
+				4ED02B02298044BE0010FFF9 /* ListSavedMessageView.swift in Sources */,
 				4E0C0AE7297EE46900B3312F /* CardModel.swift in Sources */,
 				4E694846297846D000853D85 /* GPT3View.swift in Sources */,
 				4E0C0AE5297ED11F00B3312F /* SavedMessages.swift in Sources */,
