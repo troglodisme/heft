@@ -13,6 +13,7 @@ struct GPT3Request: Encodable {
 class GeneratorViewModel: ObservableObject {
 
     @Published var generatedMessage: String = ""        
+    @Published var wasMessageGenerated: Bool = false
     
     //Import API Key from Secret file
     let apiKey = APIKey.apiKey
@@ -64,6 +65,8 @@ class GeneratorViewModel: ObservableObject {
 
             print(completion)
             generatedMessage = completion
+            
+            wasMessageGenerated = true //set bool to true
 
         } catch {
 

@@ -14,7 +14,7 @@ struct GPT3View: View {
     var selectedPersonName: String
     var selectedPersonAge: Int
     
-    var messageTypes = ["Happy", "Sad", "Poetic", "Long"]
+    var messageTypes = ["Happy message", "Sad message", "Poetic message", "Long message"]
     @State private var selectedMessageType = "Happy"
     
     var body: some View {
@@ -22,81 +22,112 @@ struct GPT3View: View {
         
         NavigationStack {
             
-            VStack(alignment: .leading) {
+            VStack() {
                 
-                HStack{
-                    
-                    Text("Write a ")
-                        .font(.headline)
-                    
-                    VStack {
-                        Picker("Please choose a message type", selection: $selectedMessageType) {
-                            ForEach(messageTypes, id: \.self) {
-                                Text($0)
+                //Display save and share buttons is message is present
+                if let messageAvailability = generatorVM.wasMessageGenerated {
+                                    
+                    //If the message is there
+                    if messageAvailability == true {
+                        
+                        if let message = generatorVM.generatedMessage {
+                            
+                            VStack{
+                                
+                                Text(message)
+                                    .font(.title3)
+                                    .padding()
+                                    .background(.orange)
+                                    .cornerRadius(10)
                             }
+                            
+
+
+                            
                         }
+                        
+                        HStack{
+                            Button {
+                                print("Save Message")
+                                let newCard = Card(message: generatorVM.generatedMessage, wasMessageSent: false)
+                                cardsModel.messages.append(newCard)
+                                
+                                //append message to CardsVIewModel
+                                
+                            } label: {
+                                Text("Save")
+                                    .padding()
+                            }
+                            
+                            Text("or")
+                            
+                            ShareLink(item: "", subject: Text("Share Message"), message: Text(generatorVM.generatedMessage))
+
+                            
+                            // Add image renderer https://developer.apple.com/documentation/swiftui/imagerenderer
+                        }
+                        
+                        
+                    } else if messageAvailability == false {
+                        
+                        
+                        VStack{
+                                                        
+                            Text("What type of birthday message would you like to send to \(selectedPersonName)?")
+                                .font(.title3)
+                            
+                            Picker("Message tone", selection: $selectedMessageType) {
+                                ForEach(messageTypes, id: \.self) {
+                                    Text($0)
+                                }
+                            }
+                            .pickerStyle(.wheel)
+                            
+                            Spacer()
+                            
+                            VStack{
+                                Button {
+                                    Task {
+                                        await generatorVM.getBirthdayMessage(personName: selectedPersonName,
+                                                                             personAge: selectedPersonAge,
+                                                                             messageType: selectedMessageType)
+                                    }
+                                } label: {
+                                    Text("Generate Now")
+                                        .padding()
+                                    
+                                }
+                                .buttonStyle(.borderedProminent)
+                            }
+                            
+                            Spacer()
+                        }
+                        
+                        
                     }
                     
-                    Text("Birthday message")
-                    
                 }
                 
-                
-                if let message = generatorVM.generatedMessage {
-                    
-                    Text(message)
-                                    
-                } else {
-                    Text("No message yet...")
-                }
                 
                 Spacer()
                 
-                HStack{
-                    
-                    //Generate Birthday Message
-                    Button {
-                        Task {
-                            await generatorVM.getBirthdayMessage(personName: selectedPersonName,
-                                                                 personAge: selectedPersonAge,
-                                                                 messageType: selectedMessageType)
-                        }
-                    } label: {
-                        Text("Generate message")
-                    }
-                    
-                    //Generate Birthday Message
-                    Button {
-                        print("Save message")
-                        let newCard = Card(message: generatorVM.generatedMessage, wasMessageSent: false)
-                        cardsModel.messages.append(newCard)
-                        
-                        //append message to CardsVIewModel
-                        
-                    } label: {
-                        Text("Save message")
-                    }
-                    
-                    Text("Share")
-                    // Add image renderer https://developer.apple.com/documentation/swiftui/imagerenderer
-                    // Add share link https://developer.apple.com/documentation/SwiftUI/ShareLink
-                    
-                }
-
                 
                 
             }
             .padding()
-            .navigationTitle("BirthdayCard")
+            .navigationTitle("Birthday Card")
         }
     }
     
 }
 
 
-//    struct GPT3View_Previews: PreviewProvider {
-//        static var previews: some View {
-//            GPT3View()
-//        }
-//    }
-//
+struct GPT3View_Previews: PreviewProvider {
+    static var previews: some View {
+        GPT3View(selectedPersonName: "Bob", selectedPersonAge: 5)
+            .environmentObject(PeopleViewModel())
+            .environmentObject(CardsViewModel())
+        
+    }
+}
+

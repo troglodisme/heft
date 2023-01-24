@@ -11,7 +11,7 @@ class CardsViewModel: ObservableObject {
     
     @Published var messages: [Card] = [
         
-        Card(message: "a fake saved message", wasMessageSent: false)
+//        Card(message: "a fake saved message", wasMessageSent: false)
                                        
     ]
     

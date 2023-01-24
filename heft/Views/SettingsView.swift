@@ -9,10 +9,6 @@ import SwiftUI
 
 struct SettingsView: View {
     
-
-    
-//    @Environment (\.dismiss) var dismiss
-    
     @State private var darkmode = true
     @State private var money = 0
     @State private var showNotif = true
