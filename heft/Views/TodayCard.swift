@@ -13,7 +13,7 @@ struct TodayCard: View {
     
     var body: some View {
         
-        NavigationStack {
+        
             
             ForEach(peopleModel.people, id: \.id) { person in
                 
@@ -59,7 +59,7 @@ struct TodayCard: View {
                 
             }
             
-        } //end of navigation stack
+        //end of navigation stack
         
     }
 }
