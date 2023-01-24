@@ -104,7 +104,6 @@
 				4E694845297846D000853D85 /* GPT3View.swift */,
 				4E0C0AE2297ED0B600B3312F /* SettingsView.swift */,
 				4E0C0AE4297ED11F00B3312F /* SavedMessages.swift */,
-				4EBF10B92979622400777729 /* Secrets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,13 +117,6 @@
 				4EBF10B62979621200777729 /* APIKey.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		4EBF10B92979622400777729 /* Secrets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Secrets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
