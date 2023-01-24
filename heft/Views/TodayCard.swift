@@ -17,7 +17,7 @@ struct TodayCard: View {
             
             ForEach(peopleModel.people, id: \.id) { person in
                 
-                if person.countdownDays == 1 {
+                if person.countdownDays == 0 {
                     
                     ZStack{
                         Rectangle()
