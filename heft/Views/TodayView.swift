@@ -11,6 +11,8 @@ struct TodayView: View {
     
     @EnvironmentObject private var peopleModel: PeopleViewModel
     
+    @FetchRequest(sortDescriptors: [], predicate: nil) var persons: FetchedResults<Person>
+    
     @State private var isSheetShowing = false
 
     

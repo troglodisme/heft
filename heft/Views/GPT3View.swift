@@ -3,7 +3,8 @@
 import SwiftUI
 
 struct GPT3View: View {
-    
+    @Environment(\.managedObjectContext) var moc
+
     @ObservedObject var generatorVM = GeneratorViewModel()
     
     @EnvironmentObject var peopleModel: PeopleViewModel
@@ -55,7 +56,7 @@ struct GPT3View: View {
                         HStack{
                             Button {
                                 print("Save Message")
-                                let newCard = Card(person: Person(name: selectedPersonName),
+                                let newCard = Card(person: Persona(name: selectedPersonName),
                                                    message: generatorVM.generatedMessage,
                                                    wasMessageSent: false)
   
@@ -145,4 +146,4 @@ struct GPT3View_Previews: PreviewProvider {
         
     }
 }
-
+//

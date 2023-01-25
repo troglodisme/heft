@@ -10,7 +10,7 @@ import Foundation
 struct Card {
     
     let id = UUID()
-    var person: Person
+    var person: Persona
     var message: String  //Store messages here
     var wasMessageSent: Bool
     

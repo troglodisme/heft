@@ -26,6 +26,10 @@
 		4EBF10B72979621200777729 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF10B62979621200777729 /* APIKey.swift */; };
 		4ED02B02298044BE0010FFF9 /* ListSavedMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED02B01298044BE0010FFF9 /* ListSavedMessageView.swift */; };
 		D98CE7D32978B4B6009CE94D /* TodayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CE7D22978B4B6009CE94D /* TodayCard.swift */; };
+		D9A7A24529811B450037B61C /* Heft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9A7A24329811B450037B61C /* Heft.xcdatamodeld */; };
+		D9A7A24829811C1B0037B61C /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A7A24629811C1B0037B61C /* Person+CoreDataClass.swift */; };
+		D9A7A24929811C1B0037B61C /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A7A24729811C1B0037B61C /* Person+CoreDataProperties.swift */; };
+		D9A7A24B29811CAC0037B61C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A7A24A29811CAC0037B61C /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		4EBF10B62979621200777729 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		4ED02B01298044BE0010FFF9 /* ListSavedMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSavedMessageView.swift; sourceTree = "<group>"; };
 		D98CE7D22978B4B6009CE94D /* TodayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCard.swift; sourceTree = "<group>"; };
+		D9A7A24429811B450037B61C /* Heft.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Heft.xcdatamodel; sourceTree = "<group>"; };
+		D9A7A24629811C1B0037B61C /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D9A7A24729811C1B0037B61C /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D9A7A24A29811CAC0037B61C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +100,10 @@
 		4E93D0562970CB3400349128 /* heft */ = {
 			isa = PBXGroup;
 			children = (
+				D9A7A24629811C1B0037B61C /* Person+CoreDataClass.swift */,
+				D9A7A24729811C1B0037B61C /* Person+CoreDataProperties.swift */,
 				4E93D0572970CB3400349128 /* heftApp.swift */,
+				D9A7A24A29811CAC0037B61C /* DataController.swift */,
 				4E93D06F2970D44A00349128 /* ContentView.swift */,
 				4E93D06B2970CC1E00349128 /* Views */,
 				4E93D06C2970CC2600349128 /* Model */,
@@ -114,6 +125,7 @@
 		4E93D06B2970CC1E00349128 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D9A7A24329811B450037B61C /* Heft.xcdatamodeld */,
 				4E93D06D2970D2F000349128 /* TodayView.swift */,
 				D98CE7D22978B4B6009CE94D /* TodayCard.swift */,
 				4E22064529718CF000669FC3 /* PersonView.swift */,
@@ -206,11 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A7A24529811B450037B61C /* Heft.xcdatamodeld in Sources */,
+				D9A7A24829811C1B0037B61C /* Person+CoreDataClass.swift in Sources */,
 				D98CE7D32978B4B6009CE94D /* TodayCard.swift in Sources */,
 				4E93D05A2970CB3400349128 /* PeopleView.swift in Sources */,
 				4E93D06E2970D2F000349128 /* TodayView.swift in Sources */,
 				4E93D0702970D44A00349128 /* ContentView.swift in Sources */,
 				4E93D0582970CB3400349128 /* heftApp.swift in Sources */,
+				D9A7A24B29811CAC0037B61C /* DataController.swift in Sources */,
 				4E93D0682970CB8D00349128 /* AddPersonView.swift in Sources */,
 				4E0C0AE9297EE4FD00B3312F /* CardsViewModel.swift in Sources */,
 				4E93D06A2970CBE300349128 /* PersonModel.swift in Sources */,
@@ -220,6 +235,7 @@
 				4E0C0AE5297ED11F00B3312F /* SavedMessages.swift in Sources */,
 				4E4F84262976EDC300DDC3C2 /* GeneatorViewModel.swift in Sources */,
 				4E2206482971B5E400669FC3 /* PeopleViewModel.swift in Sources */,
+				D9A7A24929811C1B0037B61C /* Person+CoreDataProperties.swift in Sources */,
 				4EBF10B72979621200777729 /* APIKey.swift in Sources */,
 				4E22064629718CF000669FC3 /* PersonView.swift in Sources */,
 				4E0C0AE3297ED0B600B3312F /* SettingsView.swift in Sources */,
@@ -425,6 +441,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D9A7A24329811B450037B61C /* Heft.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D9A7A24429811B450037B61C /* Heft.xcdatamodel */,
+			);
+			currentVersion = D9A7A24429811B450037B61C /* Heft.xcdatamodel */;
+			path = Heft.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4E93D04C2970CB3400349128 /* Project object */;
 }

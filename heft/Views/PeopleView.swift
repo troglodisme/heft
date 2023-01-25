@@ -9,10 +9,15 @@ import SwiftUI
 
 
 struct PeopleView: View {
-    
+    @Environment(\.managedObjectContext) var moc
 //    @ObservedObject var peopleModel: PeopleObservableObject
     @EnvironmentObject var peopleModel: PeopleViewModel
+    @FetchRequest(sortDescriptors: [], predicate: nil) var persons: FetchedResults<Person>
 
+    
+    
+    
+    
     @State private var isSheetShowing = false
 
     var body: some View {
@@ -25,7 +30,7 @@ struct PeopleView: View {
             
             List {
                 
-                ForEach(peopleModel.people, id: \.id) { person in
+                ForEach(persons) { person in
                     
                     HStack{
                                                 
@@ -39,13 +44,14 @@ struct PeopleView: View {
                         
                         VStack(alignment: .leading) {
                             
-                            Text(person.name)
+                            Text(person.name ?? "Unknown Name")
                                 .font(.title2)
                                 .bold()
                                                         
                             // Text(person.birthDate.formatted(.dateTime.day().month().year()) )
                             
-                            Text("\(person.age + 1) years old on \(person.birthDate.formatted(.dateTime.day().month()))")
+                            Text("\(person.age + 1) years old on")
+//                                 \(person.birthDate?.formatted(.dateTime.day().month()))")
                             }
                         Spacer()
                         

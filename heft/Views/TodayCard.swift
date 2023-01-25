@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TodayCard: View {
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(sortDescriptors: [], predicate: nil) var persons: FetchedResults<Person>
     
     @EnvironmentObject var peopleModel: PeopleViewModel
     
@@ -15,7 +18,7 @@ struct TodayCard: View {
         
         
             
-            ForEach(peopleModel.people, id: \.id) { person in
+            ForEach(persons, id: \.id) { person in
                 
                 if person.countdownDays == 0 {
                     
@@ -31,25 +34,27 @@ struct TodayCard: View {
                         VStack{
                             HStack{
                                 Spacer()
+                      
                                 Image("person")
                                     .resizable()
                                     .frame(width: 100, height: 100)
                                 Spacer()
                             }
                             
-                            Text ("\(person.name) turns \(person.age) today!")
+                            Text ("\(person.name ?? "") turns \(person.age) today!")
                                 .fontWeight(.semibold)
                                 .padding([.leading, .bottom], 20.0)
                             
                             
-                            NavigationLink(destination: GPT3View(selectedPersonName: person.name,
-                                                                 selectedPersonAge: person.age
-                                                                 )
-                            ) {
-                                
-                                Text("Send Message")
-                                
-                            }
+//                            NavigationLink(destination:
+////                                            GPT3View(selectedPersonName: person.name,
+////                                                                 selectedPersonAge: person.age
+////                                                                 )
+//                            ) {
+//
+//                                Text("Send Message")
+//
+//                            }
                             
                             
                         }
