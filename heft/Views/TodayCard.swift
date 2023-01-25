@@ -13,11 +13,11 @@ struct TodayCard: View {
     
     var body: some View {
         
-        NavigationStack {
+        
             
             ForEach(peopleModel.people, id: \.id) { person in
                 
-                if person.countdownDays == 1 {
+                if person.countdownDays == 0 {
                     
                     ZStack{
                         Rectangle()
@@ -59,7 +59,7 @@ struct TodayCard: View {
                 
             }
             
-        } //end of navigation stack
+        //end of navigation stack
         
     }
 }

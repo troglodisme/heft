@@ -13,6 +13,7 @@ struct GPT3View: View {
     //Create variables to receive the selected person
     var selectedPersonName: String
     var selectedPersonAge: Int
+    @State var generateButtonIsPressed = false
     
     var messageTypes = ["Happy message", "Sad message", "Poetic message", "Long message"]
     @State private var selectedMessageType = "Happy"
@@ -24,10 +25,15 @@ struct GPT3View: View {
             
             VStack() {
                 
+                
+                
                 //Display save and share buttons is message is present
                 if let messageAvailability = generatorVM.wasMessageGenerated {
                                     
                     //If the message is there
+                    
+                    
+                    
                     if messageAvailability == true {
                         
                         if let message = generatorVM.generatedMessage {
@@ -70,7 +76,11 @@ struct GPT3View: View {
                         }
                         
                         
-                    } else if messageAvailability == false {
+                    } else if messageAvailability == false && generateButtonIsPressed == true{
+                        ProgressView("Generating Message")
+                    }
+                    
+                    else {
                         
                         
                         VStack{
@@ -89,7 +99,10 @@ struct GPT3View: View {
                             
                             VStack{
                                 Button {
+                                    
                                     Task {
+                                        generateButtonIsPressed.toggle()
+
                                         await generatorVM.getBirthdayMessage(personName: selectedPersonName,
                                                                              personAge: selectedPersonAge,
                                                                              messageType: selectedMessageType)

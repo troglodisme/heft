@@ -28,9 +28,14 @@
          let birthDay = calendar.dateComponents([.day], from: birthDate)
          let birthdayThisYear = calendar.date(from: DateComponents(year: currentYear, month: birthMonth.month, day: birthDay.day))!
          let daysRemaining = calendar.dateComponents([.day], from: today, to: birthdayThisYear)
-         
-//         return daysRemaining.day!
-         return daysRemaining.day! + 1 // <1>
+         let possibleDays = daysRemaining.day!
+
+         if possibleDays >= 0 {
+             return daysRemaining.day! // <1>
+         }
+         else {
+             return 365 + possibleDays
+         }
 
      }
      
