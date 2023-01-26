@@ -46,15 +46,15 @@ struct TodayCard: View {
                                 .padding([.leading, .bottom], 20.0)
                             
                             
-//                            NavigationLink(destination:
-////                                            GPT3View(selectedPersonName: person.name,
-////                                                                 selectedPersonAge: person.age
-////                                                                 )
-//                            ) {
-//
-//                                Text("Send Message")
-//
-//                            }
+                            NavigationLink(destination:
+                                            GPT3View(selectedPersonName: person.name ?? "Unknown Name",
+                                                                 selectedPersonAge: person.age
+                                                                 )
+                            ) {
+
+                                Text("Send Message")
+
+                            }
                             
                             
                         }

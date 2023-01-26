@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ListSavedMessageView: View {
     @EnvironmentObject var cardsVM: CardsViewModel
+    
+    @Environment(\.managedObjectContext) var moc
 
     var body: some View {
         NavigationStack{
