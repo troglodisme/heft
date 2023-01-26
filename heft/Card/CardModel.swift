@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Card {
+struct Carta {
     
     let id = UUID()
     var person: Persona

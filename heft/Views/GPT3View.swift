@@ -56,11 +56,17 @@ struct GPT3View: View {
                         HStack{
                             Button {
                                 print("Save Message")
-                                let newCard = Card(person: Persona(name: selectedPersonName),
-                                                   message: generatorVM.generatedMessage,
-                                                   wasMessageSent: false)
+//                                let newCard = Card(person: Persona(name: selectedPersonName),
+//                                                   message: generatorVM.generatedMessage,
+//                                                   wasMessageSent: false)
+                                let newCard = Card(context: moc)
+                                newCard.person = selectedPersonName
+                                newCard.message = generatorVM.generatedMessage
+                                
+                                try? moc.save()
+                                
   
-                                cardsModel.messages.append(newCard)
+//                                cardsModel.messages.append(newCard)
                                 
                                 //append message to CardsVIewModel
                                 

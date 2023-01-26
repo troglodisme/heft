@@ -9,7 +9,7 @@ import Foundation
 
 class CardsViewModel: ObservableObject {
     
-    @Published var messages: [Card] = [
+    @Published var messages: [Carta] = [
         
 //        Card(message: "a fake saved message", wasMessageSent: false)
                                        

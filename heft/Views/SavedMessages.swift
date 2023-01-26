@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SavedMessages: View {
     
-//    @EnvironmentObject var cardsVM: CardsViewModel
     
+//    @EnvironmentObject var cardsVM: CardsViewModel
+    @FetchRequest(sortDescriptors: [], predicate: nil) var cards: FetchedResults<Card>
     var card: Card
     
     var body: some View {
@@ -19,7 +20,7 @@ struct SavedMessages: View {
 //
 //            ForEach(cardsVM.messages, id: \.id) { card in
 //
-                Text(card.message)
+                Text(card.message ?? "Unknown Message")
         
 //            }
 //        }

@@ -30,6 +30,8 @@
 		D9A7A24829811C1B0037B61C /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A7A24629811C1B0037B61C /* Person+CoreDataClass.swift */; };
 		D9A7A24929811C1B0037B61C /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A7A24729811C1B0037B61C /* Person+CoreDataProperties.swift */; };
 		D9A7A24B29811CAC0037B61C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A7A24A29811CAC0037B61C /* DataController.swift */; };
+		D9A7A26D2982D15A0037B61C /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A7A26B2982D15A0037B61C /* Card+CoreDataClass.swift */; };
+		D9A7A26E2982D15A0037B61C /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A7A26C2982D15A0037B61C /* Card+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		D9A7A24629811C1B0037B61C /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D9A7A24729811C1B0037B61C /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D9A7A24A29811CAC0037B61C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		D9A7A26B2982D15A0037B61C /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		D9A7A26C2982D15A0037B61C /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 		4E93D0562970CB3400349128 /* heft */ = {
 			isa = PBXGroup;
 			children = (
+				D9A7A26B2982D15A0037B61C /* Card+CoreDataClass.swift */,
+				D9A7A26C2982D15A0037B61C /* Card+CoreDataProperties.swift */,
 				D9A7A24629811C1B0037B61C /* Person+CoreDataClass.swift */,
 				D9A7A24729811C1B0037B61C /* Person+CoreDataProperties.swift */,
 				4E93D0572970CB3400349128 /* heftApp.swift */,
@@ -231,12 +237,14 @@
 				4E93D06A2970CBE300349128 /* PersonModel.swift in Sources */,
 				4ED02B02298044BE0010FFF9 /* ListSavedMessageView.swift in Sources */,
 				4E0C0AE7297EE46900B3312F /* CardModel.swift in Sources */,
+				D9A7A26D2982D15A0037B61C /* Card+CoreDataClass.swift in Sources */,
 				4E694846297846D000853D85 /* GPT3View.swift in Sources */,
 				4E0C0AE5297ED11F00B3312F /* SavedMessages.swift in Sources */,
 				4E4F84262976EDC300DDC3C2 /* GeneatorViewModel.swift in Sources */,
 				4E2206482971B5E400669FC3 /* PeopleViewModel.swift in Sources */,
 				D9A7A24929811C1B0037B61C /* Person+CoreDataProperties.swift in Sources */,
 				4EBF10B72979621200777729 /* APIKey.swift in Sources */,
+				D9A7A26E2982D15A0037B61C /* Card+CoreDataProperties.swift in Sources */,
 				4E22064629718CF000669FC3 /* PersonView.swift in Sources */,
 				4E0C0AE3297ED0B600B3312F /* SettingsView.swift in Sources */,
 			);
