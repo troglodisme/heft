@@ -59,12 +59,15 @@ struct GPT3View: View {
 //                                let newCard = Card(person: Persona(name: selectedPersonName),
 //                                                   message: generatorVM.generatedMessage,
 //                                                   wasMessageSent: false)
-                                let newCard = Card(context: moc)
-                                newCard.person = selectedPersonName
-                                newCard.message = generatorVM.generatedMessage
                                 
-                                try? moc.save()
+//                                let newCard = Card(context: moc)
+//                                newCard.person = selectedPersonName
+//                                newCard.message = generatorVM.generatedMessage
                                 
+                                cardsModel.addNewCard(person: selectedPersonName,
+                                                      message: generatorVM.generatedMessage)
+                                
+//                                try? moc.save()                                
   
 //                                cardsModel.messages.append(newCard)
                                 

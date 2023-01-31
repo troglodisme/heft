@@ -11,7 +11,7 @@ struct ListSavedMessageView: View {
     @EnvironmentObject var cardsVM: CardsViewModel
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: [], predicate: nil) var cards: FetchedResults<Card>
+//    @FetchRequest(sortDescriptors: [], predicate: nil) var cards: FetchedResults<Card>
 
     var body: some View {
         NavigationStack{
@@ -26,7 +26,7 @@ struct ListSavedMessageView: View {
 //                }
                 
                 
-                ForEach(cards) { card in
+                ForEach(cardsVM.messages) { card in
 
                     NavigationLink(destination: SavedMessages(card: card)) {
                         Text(card.person ?? "Unknown Name")

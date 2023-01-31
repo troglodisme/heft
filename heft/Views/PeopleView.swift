@@ -12,7 +12,7 @@ struct PeopleView: View {
     @Environment(\.managedObjectContext) var moc
     
     @EnvironmentObject var peopleModel: PeopleViewModel
-    @FetchRequest(sortDescriptors: [], predicate: nil) var persons: FetchedResults<Person>
+//    @FetchRequest(sortDescriptors: [], predicate: nil) var persons: FetchedResults<Person>
 
     
     

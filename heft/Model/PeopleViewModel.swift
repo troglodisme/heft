@@ -10,9 +10,7 @@ import CoreData
 
 class PeopleViewModel: ObservableObject {
     
-    
-    @Published var message: String = "yo"
-    
+        
     //To Do: Add variable for age (to be calculated)
     @Published var people: [Person] = [
         
@@ -43,14 +41,13 @@ class PeopleViewModel: ObservableObject {
             
         }
     
- 
-    
+
 
         func addNewPerson(name: String, birtDate: Date) {
             let newPerson = Person(context: PersistenceManager.shared.container.viewContext)
             newPerson.id = UUID()
             newPerson.name = name
-            newPerson.birthDate = Date()
+            newPerson.birthDate = birtDate
     //        newPerson.surname = surname
     //        newPerson.shortBio = shortBio
     //        newPerson.age = Int64(age)

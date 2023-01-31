@@ -10,8 +10,8 @@ import SwiftUI
 struct SavedMessages: View {
     
     
-//    @EnvironmentObject var cardsVM: CardsViewModel
-    @FetchRequest(sortDescriptors: [], predicate: nil) var cards: FetchedResults<Card>
+    @EnvironmentObject var cardsVM: CardsViewModel
+//    @FetchRequest(sortDescriptors: [], predicate: nil) var cards: FetchedResults<Card>
     var card: Card
     
     var body: some View {

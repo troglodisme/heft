@@ -77,7 +77,7 @@ struct AddPersonView: View {
 //                            print(newPerson)
 //                            moc.people.append(newPerson)
                             
-                            peopleModel.addNewPerson(name: name, birtDate: Date())
+                            peopleModel.addNewPerson(name: name, birtDate: birthday)
                         
                             
                         
