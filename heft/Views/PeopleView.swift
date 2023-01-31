@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PeopleView: View {
     @Environment(\.managedObjectContext) var moc
-//    @ObservedObject var peopleModel: PeopleObservableObject
+    
     @EnvironmentObject var peopleModel: PeopleViewModel
     @FetchRequest(sortDescriptors: [], predicate: nil) var persons: FetchedResults<Person>
 
@@ -30,7 +30,7 @@ struct PeopleView: View {
             
             List {
                 
-                ForEach(persons) { person in
+                ForEach(peopleModel.people) { person in
                     
                     HStack{
                                                 

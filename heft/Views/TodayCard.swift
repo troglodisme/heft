@@ -18,7 +18,7 @@ struct TodayCard: View {
         
         
             
-            ForEach(persons, id: \.id) { person in
+        ForEach(peopleModel.people, id: \.id) { person in
                 
                 if person.countdownDays == 0 {
                     
