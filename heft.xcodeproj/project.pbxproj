@@ -25,7 +25,6 @@
 		4E93D0702970D44A00349128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93D06F2970D44A00349128 /* ContentView.swift */; };
 		4EBF10B72979621200777729 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF10B62979621200777729 /* APIKey.swift */; };
 		4ED02B02298044BE0010FFF9 /* ListSavedMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED02B01298044BE0010FFF9 /* ListSavedMessageView.swift */; };
-		D94F999D29895FA4002B0506 /* heft in Resources */ = {isa = PBXBuildFile; fileRef = D94F999C29895FA4002B0506 /* heft */; };
 		D94F99A029895FB6002B0506 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F999E29895FB6002B0506 /* Card+CoreDataProperties.swift */; };
 		D94F99A129895FB6002B0506 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F999F29895FB6002B0506 /* Card+CoreDataClass.swift */; };
 		D98CE7D32978B4B6009CE94D /* TodayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CE7D22978B4B6009CE94D /* TodayCard.swift */; };
@@ -55,7 +54,7 @@
 		4E93D06F2970D44A00349128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4EBF10B62979621200777729 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		4ED02B01298044BE0010FFF9 /* ListSavedMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSavedMessageView.swift; sourceTree = "<group>"; };
-		D94F999C29895FA4002B0506 /* heft */ = {isa = PBXFileReference; lastKnownFileType = folder; name = heft; sourceTree = "<group>"; };
+		D94F999C29895FA4002B0506 /* heft */ = {isa = PBXFileReference; lastKnownFileType = folder; path = heft; sourceTree = "<group>"; };
 		D94F999E29895FB6002B0506 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D94F999F29895FB6002B0506 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D98CE7D22978B4B6009CE94D /* TodayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCard.swift; sourceTree = "<group>"; };
@@ -224,7 +223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E93D05F2970CB3500349128 /* Preview Assets.xcassets in Resources */,
-				D94F999D29895FA4002B0506 /* heft in Resources */,
 				4E93D05C2970CB3500349128 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
