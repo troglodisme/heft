@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct GPT3View: View {
-    @Environment(\.managedObjectContext) var moc
+//    @Environment(\.managedObjectContext) var moc
 
     @ObservedObject var generatorVM = GeneratorViewModel()
     
@@ -25,16 +25,11 @@ struct GPT3View: View {
         NavigationStack {
             
             VStack() {
-                
-                
-                
+                                            
                 //Display save and share buttons is message is present
                 if let messageAvailability = generatorVM.wasMessageGenerated {
                                     
                     //If the message is there
-                    
-                    
-                    
                     if messageAvailability == true {
                         
                         if let message = generatorVM.generatedMessage {
@@ -47,31 +42,14 @@ struct GPT3View: View {
                                     .background(.orange)
                                     .cornerRadius(10)
                             }
-                            
-
-
-                            
                         }
                         
                         HStack{
                             Button {
                                 print("Save Message")
-//                                let newCard = Card(person: Persona(name: selectedPersonName),
-//                                                   message: generatorVM.generatedMessage,
-//                                                   wasMessageSent: false)
-                                
-//                                let newCard = Card(context: moc)
-//                                newCard.person = selectedPersonName
-//                                newCard.message = generatorVM.generatedMessage
                                 
                                 cardsModel.addNewCard(person: selectedPersonName,
                                                       message: generatorVM.generatedMessage)
-                                
-//                                try? moc.save()                                
-  
-//                                cardsModel.messages.append(newCard)
-                                
-                                //append message to CardsVIewModel
                                 
                             } label: {
                                 Text("Save")
@@ -91,8 +69,7 @@ struct GPT3View: View {
                     }
                     
                     else {
-                        
-                        
+                                                
                         VStack{
                                                         
                             Text("What type of birthday message would you like to send to \(selectedPersonName)?")
@@ -127,17 +104,11 @@ struct GPT3View: View {
                             
                             Spacer()
                         }
-                        
-                        
                     }
-                    
                 }
-                
-                
+                                
                 Spacer()
-                
-                
-                
+                                            
             }
             .padding()
             .navigationTitle("Birthday Card")
@@ -155,4 +126,4 @@ struct GPT3View_Previews: PreviewProvider {
         
     }
 }
-//
+

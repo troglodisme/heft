@@ -11,9 +11,7 @@ import CoreData
 class CardsViewModel: ObservableObject {
     
     @Published var messages: [Card] = [
-        
-//        Card(message: "a fake saved message", wasMessageSent: false)
-                                       
+                                               
     ]
    
     func fetchCards() {
@@ -23,8 +21,7 @@ class CardsViewModel: ObservableObject {
                 messages = try PersistenceManager.shared.container.viewContext.fetch(request)
             } catch {
                 print("Error fetching. \(error)")
-            }
-            
+            }            
         }
     
     func addNewCard(person: String, message: String) {

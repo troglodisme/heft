@@ -8,16 +8,11 @@
 import SwiftUI
 
 struct TodayCard: View {
-    @Environment(\.managedObjectContext) var moc
-    
-    @FetchRequest(sortDescriptors: [], predicate: nil) var persons: FetchedResults<Person>
     
     @EnvironmentObject var peopleModel: PeopleViewModel
     
     var body: some View {
         
-        
-            
         ForEach(peopleModel.people, id: \.id) { person in
                 
                 if person.countdownDays == 0 {
@@ -58,14 +53,9 @@ struct TodayCard: View {
                             
                             
                         }
-
                     }
                 }
-                
-            }
-            
-        //end of navigation stack
-        
+            }            
     }
 }
 

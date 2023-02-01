@@ -38,8 +38,4 @@
          }
 
      }
-     
-//    var photo: String
-//    var daysRemaining: Int
-    
 }

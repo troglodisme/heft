@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct PeopleView: View {
-    @Environment(\.managedObjectContext) var moc
+//    @Environment(\.managedObjectContext) var moc
     
     @EnvironmentObject var peopleModel: PeopleViewModel
 //    @FetchRequest(sortDescriptors: [], predicate: nil) var persons: FetchedResults<Person>
@@ -22,11 +22,7 @@ struct PeopleView: View {
 
     var body: some View {
         
-        NavigationStack {
-            
-            VStack{
-                Text("add picker/filter here:")
-            }
+        NavigationStack {            
             
             List {
                 

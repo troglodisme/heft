@@ -14,21 +14,12 @@ class PeopleViewModel: ObservableObject {
     //To Do: Add variable for age (to be calculated)
     @Published var people: [Person] = [
         
-//        Person(name: "John Doe", birthDate: Date.init(timeIntervalSinceNow: -989200)),
-//        Person(name: "Jane Smith", birthDate: Date.init(timeIntervalSinceNow: -1234567)),
-//        Person(name: "Bob Johnson", birthDate: Date.init(timeIntervalSinceNow: -2000000)),
-//        Person(name: "John Doe", birthDate: Date.now),
-//        Person(name: "Jane Smith", birthDate: Date.init(timeIntervalSinceNow: -1000000000)),
-//        Person(name: "Bob Johnson", birthDate: Date.now)
     ]
     
-    //To Do: Add function to calculate age
     
     init() {
             fetchPeople()
         }
-
-    
     
     func fetchPeople() {
             let request = NSFetchRequest<Person>(entityName: "Person")
@@ -38,7 +29,6 @@ class PeopleViewModel: ObservableObject {
             } catch {
                 print("Error fetching. \(error)")
             }
-            
         }
     
 
@@ -48,18 +38,9 @@ class PeopleViewModel: ObservableObject {
             newPerson.id = UUID()
             newPerson.name = name
             newPerson.birthDate = birtDate
-    //        newPerson.surname = surname
-    //        newPerson.shortBio = shortBio
-    //        newPerson.age = Int64(age)
+
             saveChanges()
         }
-
-    //    func updateLearner(person: Person) {
-    //        let currentSurname = learner.surname ?? ""
-    //        let newSurname = currentSurname + "!"
-    //        learner.surname = newSurname
-    //        saveChanges()
-    //    }
 
         func deletePerson(person: Person) {
             PersistenceManager.shared.container.viewContext.delete(person)
@@ -79,7 +60,5 @@ class PeopleViewModel: ObservableObject {
                 }
                 self.fetchPeople()
             }
-        }
-    
-    
+        }        
 }

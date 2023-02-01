@@ -10,8 +10,7 @@ import SwiftUI
 struct AddPersonView: View {
     
     @Environment(\.dismiss) var dismiss
-    @Environment(\.managedObjectContext) var moc
-    
+//    @Environment(\.managedObjectContext) var moc
     
     
     @EnvironmentObject var peopleModel: PeopleViewModel

@@ -10,10 +10,7 @@ import Foundation
 struct Carta {
     
     let id = UUID()
-//    var person: Persona
     var message: String  //Store messages here
-    var wasMessageSent: Bool
-    
-    
+    var wasMessageSent: Bool    
     
 }
