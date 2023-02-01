@@ -6,7 +6,7 @@
 //
  import Foundation
 
- struct Person {
+ struct Persona {
     
     let id = UUID()
     var name: String
@@ -38,8 +38,4 @@
          }
 
      }
-     
-//    var photo: String
-//    var daysRemaining: Int
-    
 }

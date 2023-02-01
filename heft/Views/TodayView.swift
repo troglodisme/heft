@@ -10,9 +10,7 @@ import SwiftUI
 struct TodayView: View {
     
     @EnvironmentObject private var peopleModel: PeopleViewModel
-    
     @State private var isSheetShowing = false
-
     
     var body: some View {
         
@@ -25,14 +23,12 @@ struct TodayView: View {
                     HStack { 
                         TodayCard()
                     }
-                
                 }
                                 
                 PeopleView()
 
             }
-            .navigationTitle("Today")
-              
+            .navigationTitle("Birthdays")
             .toolbar {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -48,7 +44,6 @@ struct TodayView: View {
                     }
                 }
             }
-            
         }
     }
 }

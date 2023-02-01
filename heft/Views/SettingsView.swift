@@ -36,25 +36,6 @@ struct SettingsView: View {
                 .navigationBarTitleDisplayMode(
                     .inline)
                 
-//                .toolbar {
-//                    ToolbarItem(placement: .navigationBarTrailing) {
-//                        Button ("Done") {
-//                            dismiss()
-//
-//                       
-//                        }
-//                    }
-//                }
-//                
-//
-//                
-//                .toolbar {
-//                    ToolbarItem(placement: .navigationBarLeading) {
-//                        Button { dismiss() }
-//                    label: { Image(systemName: "chevron.backward") }
-//                        
-//                    }
-//                }
             }
             .accentColor(.black)
         }

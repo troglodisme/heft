@@ -7,13 +7,10 @@
 
 import Foundation
 
-struct Card {
+struct Carta {
     
     let id = UUID()
-    var person: Person
     var message: String  //Store messages here
-    var wasMessageSent: Bool
-    
-    
+    var wasMessageSent: Bool    
     
 }

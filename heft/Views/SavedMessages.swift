@@ -9,21 +9,14 @@ import SwiftUI
 
 struct SavedMessages: View {
     
-//    @EnvironmentObject var cardsVM: CardsViewModel
+    @EnvironmentObject var cardsVM: CardsViewModel
     
     var card: Card
-    
+        
     var body: some View {
         
-//        List{
-//
-//            ForEach(cardsVM.messages, id: \.id) { card in
-//
-                Text(card.message)
-        
-//            }
-//        }
-                
+                Text(card.message ?? "Unknown Message")
+   
         .padding()
         
     }
@@ -32,6 +25,7 @@ struct SavedMessages: View {
 
 //struct SavedMessages_Previews: PreviewProvider {
 //    static var previews: some View {
-//        SavedMessages()
+//        SavedMessages(card: Card)
+//            .environmentObject(CardsViewModel())
 //    }
 //}

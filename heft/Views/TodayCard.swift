@@ -13,9 +13,7 @@ struct TodayCard: View {
     
     var body: some View {
         
-        
-            
-            ForEach(peopleModel.people, id: \.id) { person in
+        ForEach(peopleModel.people, id: \.id) { person in
                 
                 if person.countdownDays == 0 {
                     
@@ -31,36 +29,33 @@ struct TodayCard: View {
                         VStack{
                             HStack{
                                 Spacer()
+                      
                                 Image("person")
                                     .resizable()
                                     .frame(width: 100, height: 100)
                                 Spacer()
                             }
                             
-                            Text ("\(person.name) turns \(person.age) today!")
+                            Text ("\(person.name ?? "") turns \(person.age) today!")
                                 .fontWeight(.semibold)
                                 .padding([.leading, .bottom], 20.0)
                             
                             
-                            NavigationLink(destination: GPT3View(selectedPersonName: person.name,
+                            NavigationLink(destination:
+                                            GPT3View(selectedPersonName: person.name ?? "Unknown Name",
                                                                  selectedPersonAge: person.age
                                                                  )
                             ) {
-                                
+
                                 Text("Send Message")
-                                
+
                             }
                             
                             
                         }
-
                     }
                 }
-                
-            }
-            
-        //end of navigation stack
-        
+            }            
     }
 }
 

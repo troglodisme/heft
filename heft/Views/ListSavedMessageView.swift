@@ -9,15 +9,16 @@ import SwiftUI
 
 struct ListSavedMessageView: View {
     @EnvironmentObject var cardsVM: CardsViewModel
-
+    
     var body: some View {
         NavigationStack{
+            
             List{
-
-                ForEach(cardsVM.messages, id:\.id) { card in
+                
+                ForEach(cardsVM.messages) { card in
 
                     NavigationLink(destination: SavedMessages(card: card)) {
-                        Text(card.person.name)
+                        Text(card.person ?? "Unknown Name")
                     }
 
                 }
@@ -29,8 +30,8 @@ struct ListSavedMessageView: View {
     }
 }
 
-struct ListSavedMessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListSavedMessageView()
-    }
-}
+//struct ListSavedMessageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListSavedMessageView()
+//    }
+//}
