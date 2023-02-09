@@ -22,12 +22,12 @@ class GeneratorViewModel: ObservableObject {
 
     var urlComponents = URLComponents(string: "https://api.openai.com")!
 
-    func getBirthdayMessage(personName: String, personAge: Int, messageType: String) async {
+    func getBirthdayMessage(personName: String, personAge: Int, messageType: String, messageLang: String) async {
 
         urlComponents.path = "/v1/completions"
 
         let requestBody = GPT3Request(model: "text-davinci-003",
-                                      prompt: "Write a \(messageType) birthday card message for \(personName) who is \(personAge) today",
+                                      prompt: "Write a \(messageType) birthday card message for \(personName) who is \(personAge) today, in \(messageLang)",
                                       temperature: 0.9,
                                       max_tokens: 300)
         
@@ -76,6 +76,7 @@ class GeneratorViewModel: ObservableObject {
 
     }
 }
+
 
 
 

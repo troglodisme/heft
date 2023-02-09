@@ -17,7 +17,12 @@ struct GPT3View: View {
     @State var generateButtonIsPressed = false
     
     var messageTypes = ["Happy message", "Sad message", "Poetic message", "Long message"]
+    
+    var messageLanguage = ["English", "Italian", "Indonesian", "Hindi"]
+    
     @State private var selectedMessageType = "Happy"
+    @State private var selectedLanguage = "English"
+
     
     var body: some View {
         
@@ -39,8 +44,11 @@ struct GPT3View: View {
                                 Text(message)
                                     .font(.title3)
                                     .padding()
-                                    .background(.orange)
                                     .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .stroke(.blue, lineWidth: 2)
+                                    )
                             }
                         }
                         
@@ -74,6 +82,7 @@ struct GPT3View: View {
                                                         
                             Text("What type of birthday message would you like to send to \(selectedPersonName)?")
                                 .font(.title3)
+                                .bold()
                             
                             Picker("Message tone", selection: $selectedMessageType) {
                                 ForEach(messageTypes, id: \.self) {
@@ -81,6 +90,18 @@ struct GPT3View: View {
                                 }
                             }
                             .pickerStyle(.wheel)
+                            
+                            
+                            Text("Choose a language")
+                                .font(.title3)
+                                .bold()
+                            
+                            Picker("Language", selection: $selectedLanguage) {
+                                ForEach(messageLanguage, id: \.self) {
+                                    Text($0)
+                                }
+                            }
+                            .pickerStyle(.segmented)
                             
                             Spacer()
                             
@@ -92,7 +113,8 @@ struct GPT3View: View {
 
                                         await generatorVM.getBirthdayMessage(personName: selectedPersonName,
                                                                              personAge: selectedPersonAge,
-                                                                             messageType: selectedMessageType)
+                                                                             messageType: selectedMessageType,
+                                                                             messageLang: selectedLanguage)
                                     }
                                 } label: {
                                     Text("Generate Now")

@@ -15,9 +15,7 @@ struct PeopleView: View {
 //    @FetchRequest(sortDescriptors: [], predicate: nil) var persons: FetchedResults<Person>
 
     
-    
-    
-    
+        
     @State private var isSheetShowing = false
 
     var body: some View {
@@ -51,9 +49,16 @@ struct PeopleView: View {
                             }
                         Spacer()
                         
-                        Text("\(person.countdownDays)")
-                            .backgroundStyle(.red)
-                            .foregroundColor(.red)
+                        if person.countdownDays == 0 {
+                            Text("Today!")
+                                .foregroundColor(.orange)
+                                .bold()
+                        } else {
+                            Text("\(person.countdownDays)")
+                                .foregroundColor(.gray)
+                                .bold()
+                        }
+
                     }
                 }
                 .onDelete(perform: delete)
